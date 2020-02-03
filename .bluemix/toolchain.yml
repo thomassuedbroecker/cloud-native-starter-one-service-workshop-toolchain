@@ -26,7 +26,7 @@ toolchain:
       $ref: "#/messages/template.gettingStarted"
 services:
   repo:
-    service_id: 'gitlab'
+    service_id: 'hostedgit'
     parameters:
       repo_name: 'cloud-native-starter-one-service-workshop-{{timestamp}}'
       repo_url: 'https://github.com/IBM/cloud-native-starter'
