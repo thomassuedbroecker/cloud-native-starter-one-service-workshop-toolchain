@@ -119,7 +119,6 @@
         ls
         pwd
         root_folder=$(cd $(dirname $0);pwd)
-        MY_REGISTRY_URL=${REGISTRY_URL}
 
         echo /------------------------------------
         echo Root folder: ${root_folder}
@@ -132,7 +131,7 @@
         kubectl create ns toolchain-one-service-workshop || true
         kubectl config set-context --current --namespace=toolchain-one-service-workshop
 
-        kubectl delete -f ./IKS-pipeline-deployment.yaml --ignore-not-found || true
+        kubectl delete -f ./IKS-pipeline-deployment.yaml --ignore-not-found
 
         kubectl apply -f ./IKS-pipeline-deployment.yaml
       
