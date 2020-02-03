@@ -89,8 +89,10 @@
         echo /------------------------------------
         echo Build the image and upload the IBM Cloud registry
         echo /------------------------------------
-
+        
+        ibmcloud cr image-rm $REGISTRY_URL/$REGISTRY_NAMESPACE/authors:1 || true
         ibmcloud cr build -f ${root_folder}/authors-java-jee/Dockerfile --tag $REGISTRY_URL/$REGISTRY_NAMESPACE/authors:1 .
+
     - name: Deploy java authors microservice to the Kubernetes cluster
       type: deployer
       build_type: kubernetes
