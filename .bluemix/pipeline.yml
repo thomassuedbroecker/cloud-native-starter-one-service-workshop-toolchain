@@ -71,24 +71,24 @@
       image_name: ${APP_NAME}
       script: |
         #!/bin/bash    
-        echo //*************************************
+        echo /------------------------------------
         echo Verify folders, variables in the deployer image
-        echo //*************************************
+        echo /------------------------------------
         ls
         pwd
         root_folder=$(cd $(dirname $0);pwd)
         cd ${root_folder}/authors-java-jee/
-        
         MY_REGISTRY_URL=${REGISTRY_URL}
-        echo //*************************************
+        
+        echo /------------------------------------*
         echo Root folder: ${root_folder}/authors-java-jee/
         echo Cloud Registry URL: $MY_REGISTRY_URL
         echo Cloud Registry Namespace: $REGISTRY_NAMESPACE 
-        echo //*************************************
+        echo /------------------------------------
         echo 
-        echo //*************************************
+        echo /------------------------------------
         echo Build the image and upload the IBM Cloud registry
-        echo //*************************************
+        echo /------------------------------------
 
         ibmcloud cr build -f ${root_folder}/authors-java-jee/Dockerfile --tag $REGISTRY_URL/$REGISTRY_NAMESPACE/authors:1 .
     - name: Deploy java authors microservice to the Kubernetes cluster
@@ -101,33 +101,36 @@
       script: |+
         #!/bin/bash
 
-        echo //*************************************
+        echo /------------------------------------
         echo Verify folders, variables in the deployer image
-        echo //*************************************
+        echo /------------------------------------
         
         ls
         pwd
         root_folder=$(cd $(dirname $0);pwd)
         MY_REGISTRY_URL=${REGISTRY_URL}
 
-        echo //*************************************
+        echo /------------------------------------
         echo Root folder: ${root_folder}/authors-java-jee/
         echo Cloud Registry URL: $MY_REGISTRY_URL
         echo Cloud Registry Namespace: $REGISTRY_NAMESPACE 
-        echo //*************************************
+        echo /------------------------------------
         echo 
-        echo //*************************************
+        echo /------------------------------------
         echo Create customized IKS-pipeline-deployment.yaml file
-        echo //*************************************
+        echo /------------------------------------
         
+        cd ${root_folder}/authors-java-jee/deployment/
+        pwd
+
         kubectl create ns toolchain-one-service-workshop || true
         kubectl config set-context --current --namespace=toolchain-one-service-workshop
 
-        kubectl delete -f ${root_folder}/authors-java-jee/deployment/IKS-pipeline-deployment.yaml --ignore-not-found
+        kubectl delete -f IKS-pipeline-deployment.yaml --ignore-not-found
 
-        sed "s+authors:1+$MY_REGISTRY_URL/$REGISTRY_NAMESPACE/authors:1+g" ${root_folder}/authors-java-jee/deployment/deployment.yaml.template > ${root_folder}/authors-nodejs/deployment/IKS-pipeline-deployment.yaml
+        sed "s+authors:1+$MY_REGISTRY_URL/$REGISTRY_NAMESPACE/authors:1+g" deployment.yaml.template > IKS-pipeline-deployment.yaml
 
-        kubectl apply -f ${root_folder}/authors-nodejs/deployment/IKS-pipeline-deployment.yaml
+        kubectl apply -f IKS-pipeline-deployment.yaml
       
         echo //*************************************
         echo Get ClusteIP and NodePort to access the authors microservice from the internet
