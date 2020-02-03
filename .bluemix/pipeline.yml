@@ -109,7 +109,7 @@
         root_folder=$(cd $(dirname $0);pwd)
         
         MY_REGISTRY_URL=${REGISTRY_URL}
-        
+
         echo *************************************
         echo Root folder: ${root_folder}/authors-java-jee/
         echo Cloud Registry URL: $MY_REGISTRY_URL
@@ -120,8 +120,8 @@
         echo Create customized IKS-pipeline-deployment.yaml file
         echo *************************************
         
-        kubectl create ns prod-one-service-workshop || true
-        kubectl config set-context --current --namespace=prod-one-service-workshop
+        kubectl create ns toolchain-one-service-workshop || true
+        kubectl config set-context --current --namespace=toolchain-one-service-workshop
 
         kubectl delete -f ${root_folder}/authors-java-jee/deployment/IKS-pipeline-deployment.yaml --ignore-not-found
 
