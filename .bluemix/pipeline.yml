@@ -78,12 +78,12 @@
         pwd
         root_folder=$(cd $(dirname $0);pwd)
         cd ${root_folder}/authors-java-jee/
-        MY_REGISTRY_URL=${REGISTRY_URL}
         
         echo /------------------------------------*
         echo Root folder: ${root_folder}/authors-java-jee/
         echo Cloud Registry URL: $MY_REGISTRY_URL
         echo Cloud Registry Namespace: $REGISTRY_NAMESPACE 
+        echo Cluster name: $PROD_CLUSTER_NAME
         echo /------------------------------------
         echo 
         echo /------------------------------------
@@ -92,15 +92,6 @@
         
         ibmcloud cr image-rm $REGISTRY_URL/$REGISTRY_NAMESPACE/authors:1 || true
         ibmcloud cr build -f ${root_folder}/authors-java-jee/Dockerfile --tag $REGISTRY_URL/$REGISTRY_NAMESPACE/authors:1 .
-
-        echo /------------------------------------
-        echo Create a customized IKS-pipeline-deployment.yaml file
-        echo /------------------------------------
-        cd ${root_folder}/authors-java-jee/deployment
-
-        sed "s+<ip:port>/<namespace>/authors:<tag>+$MY_REGISTRY_URL/$REGISTRY_NAMESPACE/authors:1+g" ./deployment-template.yaml > ./IKS-pipeline-deployment.yaml
-
-        more ./IKS-pipeline-deployment.yaml
 
     - name: Deploy java authors microservice to the Kubernetes cluster
       type: deployer
@@ -114,6 +105,9 @@
 
         echo /------------------------------------
         echo Verify folders, variables in the deployer image
+        echo Cloud Registry URL: $MY_REGISTRY_URL
+        echo Cloud Registry Namespace: $REGISTRY_NAMESPACE 
+        echo Cluster name: $PROD_CLUSTER_NAME
         echo /------------------------------------
         
         ls
@@ -131,7 +125,16 @@
         kubectl create ns toolchain-one-service-workshop || true
         kubectl config set-context --current --namespace=toolchain-one-service-workshop
 
-        kubectl delete -f ./IKS-pipeline-deployment.yaml --ignore-not-found
+        kubectl delete -f ./IKS-pipeline-deployment.yaml --ignore-not-found || true
+
+        echo /------------------------------------
+        echo Create a customized IKS-pipeline-deployment.yaml file
+        echo /------------------------------------
+        cd ${root_folder}/authors-java-jee/deployment
+  
+        sed "s+<ip:port>/<namespace>/authors:<tag>+$MY_REGISTRY_URL/$REGISTRY_NAMESPACE/authors:1+g" ./deployment-template.yaml > ./IKS-pipeline-deployment.yaml
+  
+        more ./IKS-pipeline-deployment.yaml
 
         kubectl apply -f ./IKS-pipeline-deployment.yaml
       
