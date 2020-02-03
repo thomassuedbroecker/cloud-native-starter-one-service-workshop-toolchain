@@ -91,7 +91,7 @@
         echo *************************************
 
         ibmcloud cr build -f ${root_folder}/authors-java-jee/Dockerfile --tag $REGISTRY_URL/$REGISTRY_NAMESPACE/authors:1 .
-    - name: Deploy java authors to 
+    - name: Deploy java authors microservice to the Kubernetes cluster
       type: deployer
       build_type: kubernetes
       target:
@@ -109,6 +109,7 @@
         root_folder=$(cd $(dirname $0);pwd)
         
         MY_REGISTRY_URL=${REGISTRY_URL}
+        
         echo *************************************
         echo Root folder: ${root_folder}/authors-java-jee/
         echo Cloud Registry URL: $MY_REGISTRY_URL
@@ -118,11 +119,13 @@
         echo *************************************
         echo Create customized IKS-pipeline-deployment.yaml file
         echo *************************************
+        
+        kubectl create ns prod-one-service-workshop || true
+        kubectl config set-context --current --namespace=prod-one-service-workshop
 
         kubectl delete -f ${root_folder}/authors-java-jee/deployment/IKS-pipeline-deployment.yaml --ignore-not-found
 
-        sed -e "s|<URL>|notused|g" -e "s|<DB>|local|g" ${root_folder}/authors-java-jee/deployment/deployment.yaml.template > ${root_folder}/authors-java-jee/deployment/temp-deployment.yaml
-        sed "s+authors:1+$MY_REGISTRY_URL/$REGISTRY_NAMESPACE/authors:1+g" ${root_folder}/authors-java-jee/deployment/temp-deployment.yaml > ${root_folder}/authors-nodejs/deployment/IKS-kubernetes.yaml
+        sed "s+authors:1+$MY_REGISTRY_URL/$REGISTRY_NAMESPACE/authors:1+g" ${root_folder}/authors-java-jee/deployment/eployment.yaml.template > ${root_folder}/authors-nodejs/deployment/IKS-kubernetes.yaml
         kubectl apply -f ${root_folder}/authors-nodejs/deployment/IKS-pipeline-deployment.yaml
       
         echo *************************************
