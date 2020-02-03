@@ -130,7 +130,7 @@
 
         kubectl delete -f ./IKS-pipeline-deployment.yaml --ignore-not-found || true
 
-        sed "s+authors:1+$MY_REGISTRY_URL/$REGISTRY_NAMESPACE/authors:1+g" ./deployment-template.yaml > ./IKS-pipeline-deployment.yaml
+        sed "s+<ip:port>/<namespace>/authors:<tag>+$MY_REGISTRY_URL/$REGISTRY_NAMESPACE/authors:1+g" ./deployment-template.yaml > ./IKS-pipeline-deployment.yaml
 
         kubectl apply -f ./IKS-pipeline-deployment.yaml
       
