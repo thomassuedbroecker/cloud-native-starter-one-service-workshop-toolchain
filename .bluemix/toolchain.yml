@@ -31,9 +31,9 @@ services:
       repo_name: 'cloud-native-starter-one-service-workshop-{{timestamp}}'
       repo_url: 'https://github.com/IBM/cloud-native-starter'
       type: 'clone'
-      has_issues: false
+      has_issues: true
       enable_traceability: true
-      private_repo: false
+      private_repo: true
   build:
     service_id: pipeline
     parameters:
