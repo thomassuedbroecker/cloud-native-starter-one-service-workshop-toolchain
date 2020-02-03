@@ -1,0 +1,66 @@
+version: '2'
+messages:
+  $i18n: locales.yml
+template:
+  name:
+    $ref: "#/messages/template.name"
+  description:
+    $ref: "#/messages/template.description"
+  header: '![](toolchain.svg?localize)'
+  icon: secure-lock-kubernetes.svg
+  required:
+    - build
+    - repo
+  info:
+    git url: >
+      "[" + $env.repository + "]" +
+        "(" + $env.repository + ")"
+    git branch: >
+      "[" + $env.branch + "]" +
+        "(" + $env.repository +
+          "/tree/" + $env.branch + ")"
+toolchain:
+  name: 'cloud-native-starter-reactive-toolchain-{{timestamp}}'
+  template:
+    getting_started:
+      $ref: "#/messages/template.gettingStarted"
+services:
+  repo:
+    service_id: 'githubpublic'
+    parameters:
+      repo_name: 'cloud-native-starter-reactive-{{timestamp}}'
+      repo_url: 'https://github.com/IBM/cloud-native-starter'
+      type: 'clone'
+      has_issues: false
+      enable_traceability: true
+      private_repo: false
+  build:
+    service_id: pipeline
+    parameters:
+      services:
+        - repo
+      name: '{{services.repo.parameters.repo_name}}'
+      ui-pipeline: true
+      configuration:
+        content:
+          $text: pipeline.yml
+        env:
+          GIT_REPO: repo
+          APP_NAME: '{{form.pipeline.parameters.app-name}}'
+          REGISTRY_REGION_ID: '{{form.pipeline.parameters.registry-region}}'
+          REGISTRY_NAMESPACE: '{{form.pipeline.parameters.registry-namespace}}'
+          API_KEY: '{{form.pipeline.parameters.api-key}}'
+          PROD_REGION_ID: '{{form.pipeline.parameters.prod-region}}'
+          PROD_RESOURCE_GROUP: '{{form.pipeline.parameters.prod-resource-group}}'
+          PROD_CLUSTER_NAME: '{{form.pipeline.parameters.prod-cluster-name}}'
+          PROD_CLUSTER_NAMESPACE: '{{form.pipeline.parameters.prod-cluster-namespace}}'
+        execute: true
+  webide:
+    service_id: orion
+form:
+  pipeline:
+    parameters:
+      app-name: '{{services.repo.parameters.repo_name}}'
+      prod-cluster-namespace: prod
+    schema:
+      $ref: deploy.json
