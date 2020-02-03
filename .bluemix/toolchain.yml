@@ -20,7 +20,7 @@ template:
         "(" + $env.repository +
           "/tree/" + $env.branch + ")"
 toolchain:
-  name: 'cloud-native-starter-one-service-toolchain-{{timestamp}}'
+  name: 'cloud-native-starter-one-service-workshop-toolchain-{{timestamp}}'
   template:
     getting_started:
       $ref: "#/messages/template.gettingStarted"

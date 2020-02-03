@@ -71,10 +71,25 @@
       image_name: ${APP_NAME}
       script: |
         #!/bin/bash    
-        root_folder=$(cd $(dirname $0); cd ..; pwd)
-        MY_REGISTRY_URL=${REGISTRY_URL}
-        
+        echo *************************************
+        echo Verify folders, variables in the deployer image
+        echo *************************************
+        ls
+        pwd
+        root_folder=$(cd $(dirname $0);pwd)
         cd ${root_folder}/authors-java-jee/
+        
+        MY_REGISTRY_URL=${REGISTRY_URL}
+        echo *************************************
+        echo Root folder: ${root_folder}/authors-java-jee/
+        echo Cloud Registry URL: $MY_REGISTRY_URL
+        echo Cloud Registry Namespace: $REGISTRY_NAMESPACE 
+        echo *************************************
+        echo 
+        echo *************************************
+        echo Build the image and upload the IBM Cloud registry
+        echo *************************************
+
         ibmcloud cr build -f ${root_folder}/authors-java-jee/Dockerfile --tag $REGISTRY_URL/$REGISTRY_NAMESPACE/authors:1 .
     - name: Deploy java authors to 
       type: deployer
@@ -85,7 +100,24 @@
         kubernetes_cluster: ${PROD_CLUSTER_NAME}
       script: |+
         #!/bin/bash
-        root_folder=$(cd $(dirname $0); cd ..; pwd) 
+
+        echo *************************************
+        echo Verify folders, variables in the deployer image
+        echo *************************************
+        ls
+        pwd
+        root_folder=$(cd $(dirname $0);pwd)
+        
+        MY_REGISTRY_URL=${REGISTRY_URL}
+        echo *************************************
+        echo Root folder: ${root_folder}/authors-java-jee/
+        echo Cloud Registry URL: $MY_REGISTRY_URL
+        echo Cloud Registry Namespace: $REGISTRY_NAMESPACE 
+        echo *************************************
+        echo 
+        echo *************************************
+        echo Create customized IKS-pipeline-deployment.yaml file
+        echo *************************************
 
         kubectl delete -f ${root_folder}/authors-java-jee/deployment/IKS-pipeline-deployment.yaml --ignore-not-found
 
@@ -93,7 +125,14 @@
         sed "s+authors:1+$MY_REGISTRY_URL/$REGISTRY_NAMESPACE/authors:1+g" ${root_folder}/authors-java-jee/deployment/temp-deployment.yaml > ${root_folder}/authors-nodejs/deployment/IKS-kubernetes.yaml
         kubectl apply -f ${root_folder}/authors-nodejs/deployment/IKS-pipeline-deployment.yaml
       
+        echo *************************************
+        echo Get ClusteIP and NodePort to access the authors microservice from the internet
+        echo *************************************
+
         nodeport=$(kubectl get svc authors --ignore-not-found --output 'jsonpath={.spec.ports[*].nodePort}')
         clusterip=$(ibmcloud ks workers --cluster $PROD_CLUSTER_NAME | awk '/Ready/ {print $2;exit;}')
+
+        echo *************************************
         echo Sample API call: \"curl 'http://${clusterip}:${nodeport}/api/v1/getauthor?name=Niklas%20Heidloff'\"
+        echo *************************************
   
