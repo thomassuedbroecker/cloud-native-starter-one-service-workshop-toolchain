@@ -119,7 +119,7 @@
         echo /------------------------------------
         echo 
         echo /------------------------------------
-        echo Create customized IKS-pipeline-deployment.yaml file
+        echo Create a customized IKS-pipeline-deployment.yaml file
         echo /------------------------------------
         
         cd ${root_folder}/authors-java-jee/deployment/
@@ -128,20 +128,20 @@
         kubectl create ns toolchain-one-service-workshop || true
         kubectl config set-context --current --namespace=toolchain-one-service-workshop
 
-        kubectl delete -f IKS-pipeline-deployment.yaml --ignore-not-found
+        kubectl delete -f ./IKS-pipeline-deployment.yaml --ignore-not-found || true
 
-        sed "s+authors:1+$MY_REGISTRY_URL/$REGISTRY_NAMESPACE/authors:1+g" deployment.yaml.template > IKS-pipeline-deployment.yaml
+        sed "s+authors:1+$MY_REGISTRY_URL/$REGISTRY_NAMESPACE/authors:1+g" ./deployment-template.yaml > ./IKS-pipeline-deployment.yaml
 
-        kubectl apply -f IKS-pipeline-deployment.yaml
+        kubectl apply -f ./IKS-pipeline-deployment.yaml
       
-        echo //*************************************
+        echo /----------------------------------
         echo Get ClusteIP and NodePort to access the authors microservice from the internet
-        echo //*************************************
+        echo /----------------------------------
 
         nodeport=$(kubectl get svc authors --ignore-not-found --output 'jsonpath={.spec.ports[*].nodePort}')
         clusterip=$(ibmcloud ks workers --cluster $PROD_CLUSTER_NAME | awk '/Ready/ {print $2;exit;}')
 
-        echo //*************************************
+        echo /----------------------------------
         echo Sample API call: \"curl 'http://${clusterip}:${nodeport}/api/v1/getauthor?name=Niklas%20Heidloff'\"
-        echo //*************************************
+        echo /----------------------------------
   
