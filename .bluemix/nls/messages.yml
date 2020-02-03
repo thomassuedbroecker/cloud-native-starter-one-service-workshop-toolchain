@@ -1,10 +1,10 @@
 ---
 #The format for creating a link with a URL and text is [link text](link url) with no spaces or characters between the two sets of brackets- []()
-template.name: "Deploy a reactive Quarkus cloud-native application"
-template.description: "Deploy a reactive Quarkus cloud-native application"
+template.name: "Deploy the cloud-native-starter authors microservice of the one service workshop"
+template.description: "Deploy the cloud-native-starter authors microservice of the one service workshop"
 template.gettingStarted: " **Your toolchain is ready!**\n**Quick start:** Commit a change to the Git repo to trigger a new Docker image build, which will be scanned for vulnerabilites and deployed in your Kubernetes cluster. For step-by-step instructions, see the [tutorial](https://www.ibm.com/cloud/garage/tutorials/use-develop-kubernetes-app-toolchain?task=2) for this toolchain."
-deploy.title: "Hello World Deploy Stage"
-deploy.description: "hello-world simple toolchain"
+deploy.title: "Deploy Stage"
+deploy.description: "Toolchain"
 deploy.longDescription: "The Delivery Pipeline automates continuous build, test and deploy of the Docker application."
 deploy.appDescription: "The name of your app"
 deploy.appName: "App name"
