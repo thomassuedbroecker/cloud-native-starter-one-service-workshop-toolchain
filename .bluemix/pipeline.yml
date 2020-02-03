@@ -93,6 +93,15 @@
         ibmcloud cr image-rm $REGISTRY_URL/$REGISTRY_NAMESPACE/authors:1 || true
         ibmcloud cr build -f ${root_folder}/authors-java-jee/Dockerfile --tag $REGISTRY_URL/$REGISTRY_NAMESPACE/authors:1 .
 
+        echo /------------------------------------
+        echo Create a customized IKS-pipeline-deployment.yaml file
+        echo /------------------------------------
+        cd ${root_folder}/authors-java-jee/deployment
+
+        sed "s+<ip:port>/<namespace>/authors:<tag>+$MY_REGISTRY_URL/$REGISTRY_NAMESPACE/authors:1+g" ./deployment-template.yaml > ./IKS-pipeline-deployment.yaml
+
+        more ./IKS-pipeline-deployment.yaml
+
     - name: Deploy java authors microservice to the Kubernetes cluster
       type: deployer
       build_type: kubernetes
@@ -113,14 +122,9 @@
         MY_REGISTRY_URL=${REGISTRY_URL}
 
         echo /------------------------------------
-        echo Root folder: ${root_folder}/authors-java-jee/
-        echo Cloud Registry URL: $MY_REGISTRY_URL
-        echo Cloud Registry Namespace: $REGISTRY_NAMESPACE 
+        echo Root folder: ${root_folder}
         echo /------------------------------------
         echo 
-        echo /------------------------------------
-        echo Create a customized IKS-pipeline-deployment.yaml file
-        echo /------------------------------------
         
         cd ${root_folder}/authors-java-jee/deployment/
         pwd
@@ -130,12 +134,10 @@
 
         kubectl delete -f ./IKS-pipeline-deployment.yaml --ignore-not-found || true
 
-        sed "s+<ip:port>/<namespace>/authors:<tag>+$MY_REGISTRY_URL/$REGISTRY_NAMESPACE/authors:1+g" ./deployment-template.yaml > ./IKS-pipeline-deployment.yaml
-
         kubectl apply -f ./IKS-pipeline-deployment.yaml
       
         echo /----------------------------------
-        echo Get ClusteIP and NodePort to access the authors microservice from the internet
+        echo Get ClusteIP ($PROD_CLUSTER_NAME) and NodePort to access the authors microservice from the internet
         echo /----------------------------------
 
         nodeport=$(kubectl get svc authors --ignore-not-found --output 'jsonpath={.spec.ports[*].nodePort}')
