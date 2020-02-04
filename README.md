@@ -52,12 +52,9 @@ _Note:_ Free clusters expire after one month.
 
 #### Step 5: Click on the Kubernetes Services and select "Free"
 
-Ensure you set following values in the creation dialog:
+Ensure you set following values in the creation dialog and don't change the remaining values:
 
 * Cluster name:     cloud-native
-* Resource group:   Default
-* Geography:        North America
-* Metro:            Dallas
 
 _Note:_ In the new IBM Cloud UI it seems the enties for Geography and Metro are no longer available.
 
