@@ -110,11 +110,16 @@ _Note:_ Depending on your region selection you maybe have to authorize the GitLa
 
 ![Authorize the GitLab hosted in that IBM region](images/toolchain-03.png)
 
-#### Step 4: Create a IBM Cloud API key by pressing "new"
+#### Step 4: Create a IBM Cloud API key by pressing "new" and "ok"
 
 Enable the toolchain to create services or set configurations in your IBM Cloud Account, for that it needs an "IBM Cloud API key" depending the region you are working in.
 
 ![Create a IBM Cloud API key](images/toolchain-04.png)
+
+_Note:_ You will be informed which name is used.
+
+![Notification dialog](images/toolchain-05.png)
+
 
 # 6 Information resources about developing a open toolchain
 
