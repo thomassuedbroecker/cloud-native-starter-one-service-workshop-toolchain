@@ -10,6 +10,9 @@
   - name: PROD_REGION_ID
     value: ${PROD_REGION_ID}
     type: text
+  - name: PROD_CLUSTER_NAMESPACE
+    value: ${PROD_CLUSTER_NAMESPACE}
+    type: text
   stages:
   - name: FETCH
     inputs:
@@ -122,7 +125,7 @@
         cd ${root_folder}/authors-java-jee/deployment/
         pwd
 
-        kubectl create ns toolchain-one-service-workshop || true
+        kubectl create ns  ${PROD_CLUSTER_NAMESPACE} || true
         kubectl config set-context --current --namespace=toolchain-one-service-workshop
 
         kubectl delete -f ./IKS-pipeline-deployment.yaml --ignore-not-found || true
