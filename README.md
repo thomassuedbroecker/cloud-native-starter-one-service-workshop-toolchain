@@ -87,7 +87,7 @@ _Note:_ Namespaces are required to be **unique** across the entire **region** th
 
 # 5 Build a IBM Cloud toolchain <a name="part-SETUP-04"></a>
 
-#### Step 1: Press Create toolchain
+#### Step 1: Press "Create toolchain"
 
 [![Create toolchain](https://cloud.ibm.com/devops/graphics/create_toolchain_button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fthomassuedbroecker%2Fcloud-native-starter-one-service-workshop-toolchain)
 
@@ -110,6 +110,11 @@ _Note:_ Depending on your region selection you maybe have to authorize the GitLa
 
 ![Authorize the GitLab hosted in that IBM region](images/toolchain-03.png)
 
+#### Step 4: Create a IBM Cloud API key by pressing "new"
+
+Enable the toolchain to create services or set configurations in your IBM Cloud Account, for that it needs an "IBM Cloud API key" depending the region you are working in.
+
+![Create a IBM Cloud API key](images/toolchain-04.png)
 
 # 6 Information resources about developing a open toolchain
 
