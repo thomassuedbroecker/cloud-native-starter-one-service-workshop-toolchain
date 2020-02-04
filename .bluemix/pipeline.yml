@@ -161,6 +161,6 @@
         echo /----------------------------------
         echo $clusterip
         echo $nodeport
-        echo Sample API call: \"curl 'http://$clusterip:$nodeport/api/v1/getauthor?name=Niklas%20Heidloff'\"
+        echo Sample API call: \"curl 'http://${clusterip}:${nodeport}/api/v1/getauthor?name=Niklas%20Heidloff'\"
         echo /----------------------------------
   
