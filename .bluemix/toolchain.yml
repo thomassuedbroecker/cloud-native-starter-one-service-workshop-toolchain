@@ -61,6 +61,6 @@ form:
   pipeline:
     parameters:
       app-name: '{{services.repo.parameters.repo_name}}'
-      prod-cluster-namespace: toolchain-one-service-workshop
+      prod-cluster-namespace: default
     schema:
       $ref: deploy.json
