@@ -7,6 +7,8 @@
 3. [Create a free Kubernetes cluster](#part-SETUP-02)
 4. [Configure the IBM Cloud Container Registry](#part-SETUP-03)
 5. [Build a IBM Cloud toolchain](#part-SETUP-04)
+6. [Work with the created toolchain](#part-SETUP-05)
+
 
 # 1. Register for IBM Cloud <a name="part-SETUP-00"></a>
 
@@ -123,18 +125,25 @@ _Note:_ You will be informed which name is used.
 #### Step 5: Verify the configuration
 
 You see your the relevant information of your created IBM Cloud Container Registry and the IBM Cloud Cluster.
+Do not change the defaults!
 
 ![IBM Cloud Container Registry and the IBM Cloud Cluster information](images/toolchain-06.png)
 
-_Note:_ Do not change the defaults.
+_Note:_ Especially don't change the Kubernetes namespace name, because you need to know image pull secret credentials to access a container registry. 
+For more details visit the following pages.
+
+* [Documentation on IBM Cloud](https://cloud.ibm.com/docs/containers?topic=containers-images)
+* [Documentation on Kubernetes](https://kubernetes.io/docs/concepts/containers/images/)
 
 #### Step 6: Press "Create"
 
 ![Press Create](images/toolchain-07.png)
 
+# 6 Work with the created toolchain <a name="part-SETUP-05"></a>
 
 
-# 6 Information resources about developing a open toolchain
+
+# 7 Information resources about developing a open toolchain
 
 * [Creating Custom Toolchain Templates](https://github.com/open-toolchain/sdk/wiki/Creating-Custom-Toolchain-Templates)
 * [Configuring tool integrations](https://cloud.ibm.com/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations)
