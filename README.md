@@ -124,9 +124,15 @@ _Note:_ You will be informed which name is used.
 
 You see your the relevant information of your created IBM Cloud Container Registry and the IBM Cloud Cluster.
 
-![IBM Cloud Container Registry and the IBM Cloud Cluster information](images/toolchain-05.png)
+![IBM Cloud Container Registry and the IBM Cloud Cluster information](images/toolchain-06.png)
 
 _Note:_ Do not change the defaults.
+
+#### Step 6: Press "Create"
+
+![Press Create](images/toolchain-07.png)
+
+
 
 # 6 Information resources about developing a open toolchain
 
