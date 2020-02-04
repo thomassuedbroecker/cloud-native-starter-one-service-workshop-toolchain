@@ -129,6 +129,7 @@
         kubectl config set-context --current --namespace=${PROD_CLUSTER_NAMESPACE}
 
         kubectl delete -f ./IKS-pipeline-deployment.yaml --ignore-not-found || true
+        kubectl delete -f ./service.yaml --ignore-not-found || true
 
         echo /------------------------------------
         echo Create a customized IKS-pipeline-deployment.yaml file
@@ -137,9 +138,18 @@
   
         sed "s+<ip:port>/<namespace>/authors:<tag>+$MY_REGISTRY_URL/$REGISTRY_NAMESPACE/authors:1+g" ./deployment-template.yaml > ./IKS-pipeline-deployment.yaml
   
+        echo /------------------------------------
+        echo content of the IKS-pipeline-deployment.yaml file
+        echo /------------------------------------
         more ./IKS-pipeline-deployment.yaml
 
         kubectl apply -f ./IKS-pipeline-deployment.yaml
+        
+        echo /------------------------------------
+        echo content of the service.yaml file
+        echo /------------------------------------
+        more ./service.yaml
+        kubectl apply -f ./service.yaml
       
         echo /----------------------------------
         echo Get ClusteIP $PROD_CLUSTER_NAME and NodePort to access the authors microservice from the internet
