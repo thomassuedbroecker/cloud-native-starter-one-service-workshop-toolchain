@@ -120,6 +120,13 @@ _Note:_ You will be informed which name is used.
 
 ![Notification dialog](images/toolchain-05.png)
 
+#### Step 5: Verify the configuration
+
+You see your the relevant information of your created IBM Cloud Container Registry and the IBM Cloud Cluster.
+
+![IBM Cloud Container Registry and the IBM Cloud Cluster information](images/toolchain-05.png)
+
+_Note:_ Do not change the defaults.
 
 # 6 Information resources about developing a open toolchain
 
