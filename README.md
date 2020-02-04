@@ -6,7 +6,7 @@
 2. [Insert feature code](#part-SETUP-01)
 3. [Create a free Kubernetes cluster](#part-SETUP-02)
 4. [Configure the IBM Cloud Container Registry](#part-SETUP-03)
-5. [Build a IBM Cloud toolchain](#part-SETUP-04")
+5. [Build a IBM Cloud toolchain](#part-SETUP-04)
 
 # 1. Register for IBM Cloud <a name="part-SETUP-00"></a>
 
@@ -91,7 +91,27 @@ _Note:_ Namespaces are required to be **unique** across the entire **region** th
 
 [![Create toolchain](https://cloud.ibm.com/devops/graphics/create_toolchain_button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fthomassuedbroecker%2Fcloud-native-starter-one-service-workshop-toolchain)
 
-## Information resources about developing a open toolchain
+#### Step 2: Select the us-south region
+
+TBD
+
+![Select the us-south region](images/toolchain-01.png)
+
+
+#### Step 3: Configure the location for the cloned github project
+
+I our situation we use **git repos and issue tracking hosted by IBM and built on GitLab Community Edition**.
+
+We will clone the _Cloud Native Starter_ project to a repository called **cloud-native-starter-one-service-workshop**-TIMESTAMP.  
+
+![Configure the location for the cloned github project](images/toolchain-02.png)
+
+_Note:_ Depending on your region selection you maybe have to authorize the GitLab hosted in that IBM region.
+
+![Authorize the GitLab hosted in that IBM region](images/toolchain-03.png)
+
+
+# 6 Information resources about developing a open toolchain
 
 * [Creating Custom Toolchain Templates](https://github.com/open-toolchain/sdk/wiki/Creating-Custom-Toolchain-Templates)
 * [Configuring tool integrations](https://cloud.ibm.com/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations)
