@@ -6,6 +6,7 @@
 2. [Insert feature code](#part-SETUP-01)
 3. [Create a free Kubernetes cluster](#part-SETUP-02)
 4. [Configure the IBM Cloud Container Registry](#part-SETUP-03)
+5. [Build a IBM Cloud toolchain](#part-SETUP-04")
 
 # 1. Register for IBM Cloud <a name="part-SETUP-00"></a>
 
@@ -70,23 +71,23 @@ The creation of the custer takes up to 20 min.
 
 # 4 Configure the IBM Cloud Container Registry <a name="part-SETUP-03"></a>
 
-1. Select in **Kubernetes** the entry **Registry** and ensure your are in the **Dallas location**.
+#### Step 1: Select in **Kubernetes** the entry **Registry** and ensure your are in the **Dallas location**.
 
 ![Select in Kubernetes the entry Registry](images/ibmcloud-configure-container-registry-1.png)
 
-2. The create a namespace with a unique name cloud-native-[YOURNAME]
+#### Step 2: The create a namespace with a unique name cloud-native-[YOURNAME]
 
 ![The create a namespace with a unique name cloud-native](images/ibmcloud-configure-container-registry-2.png)
 
 _Note:_ Namespaces are required to be **unique** across the entire **region** that the **specific registry** is located in, not just ***unique to your account**. This is mentioned in the following [public documentation](https://cloud.ibm.com/docs/services/Registry?topic=registry-getting-started#gs_registry_namespace_add).
 
-3. Verify the namespace was created
+#### Step 3: Verify the namespace was created
 
 ![Verify the namespace was created](images/ibmcloud-configure-container-registry-3.png)
 
+# 5 Build a IBM Cloud toolchain <a name="part-SETUP-04"></a>
 
----
-
+#### Step 1: Press Create toolchain
 
 [![Create toolchain](https://cloud.ibm.com/devops/graphics/create_toolchain_button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fthomassuedbroecker%2Fcloud-native-starter-one-service-workshop-toolchain)
 
