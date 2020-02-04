@@ -126,7 +126,7 @@
         pwd
 
         kubectl create ns  ${PROD_CLUSTER_NAMESPACE} || true
-        kubectl config set-context --current --namespace=toolchain-one-service-workshop
+        kubectl config set-context --current --namespace=${PROD_CLUSTER_NAMESPACE}
 
         kubectl delete -f ./IKS-pipeline-deployment.yaml --ignore-not-found || true
 
