@@ -129,7 +129,7 @@ Do not change the defaults!
 
 ![IBM Cloud Container Registry and the IBM Cloud Cluster information](images/toolchain-06.png)
 
-_Note:_ Especially don't change the Kubernetes namespace name, because you need to know image pull secret credentials to access a container registry. 
+_Note:_ Especially don't change the Kubernetes namespace name, because you need to know the image pull secret credentials to access a container registry. 
 For more details visit the following pages.
 
 * [Documentation on IBM Cloud](https://cloud.ibm.com/docs/containers?topic=containers-images)
@@ -141,13 +141,26 @@ For more details visit the following pages.
 
 # 6 Work with the created toolchain <a name="part-SETUP-05"></a>
 
+I the toolchain you see:
+
+* **Think** Issues managed in GitLab
+* **Code**  [Eclipse Orion Web IDE](https://cloud.ibm.com/docs/services/ContinuousDelivery?topic=ContinuousDelivery-web_ide)
+            and source code managed in GitLab
+* **Delivery** Managed in the in the [Continues Delivery service](https://cloud.ibm.com/catalog/services/continuous-delivery#about)
+
 #### Step 1: Visit the create GitLab project inside IBM Cloud
 
 Open the GitLab repository in a new browser tab.
 
-![Press Create](images/toolchain-08.png)
+![Open the GitLab repository in a new browser tab](images/toolchain-08.png)
 
-#### Step 2: Open the 
+#### Step 2: Take a look in the cloned Cloud Native Starter project 
+
+![Take a look in the cloned Cloud Native Starter project](images/toolchain-09.png)
+
+#### Step 3: Go back to the toolchain and visit the delivey pipeline
+
+![Open the delivery pipeline](images/toolchain-10.png)
 
 
 
