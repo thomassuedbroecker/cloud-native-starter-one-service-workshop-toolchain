@@ -30,7 +30,7 @@ In the image you get an overview of the authors microservice deployment to the f
 
 [Verify the deployed authors microservice](#part-SECTION-03)
 
-[Additional information](#part-SECTION-03)
+[Additional information](#part-SECTION-04)
 
 ---
 
@@ -212,7 +212,7 @@ Wait until the stages and their jobs are executed.
 
 ![Open the delivery pipeline](images/toolchain-11.png)
 
-## 3 Verify the deployed authors microservice <am name="part-SECTION-03"></a>
+# Verify the deployed authors microservice <am name="part-SECTION-03"></a>
 
 #### Step 1: Open the deployment job in a new browser tab
 
@@ -245,7 +245,7 @@ You can verfiy the
 
 ---
 
-# Additional information <a name="part-SECTION-03"></a>
+# Additional information <a name="part-SECTION-04"></a>
 
 ## Information resources about developing a open toolchain
 
