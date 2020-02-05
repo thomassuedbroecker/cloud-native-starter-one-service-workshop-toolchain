@@ -170,7 +170,7 @@ Do not change the defaults!
 ![IBM Cloud Container Registry and the IBM Cloud Cluster information](images/toolchain-06.png)
 
 
-_Note:_ If you change the name of Kubernetes namespace name, you need to know the image pull secret credentials to access a container registry for that namespace. For more details please visit the following pages.
+_Note:_ If you change the Kubernetes namespace name, you need to be aware that you have to know the image pull secret credentials to access a container registry. For more details please visit the following pages.
 
 * [Documentation on IBM Cloud](https://cloud.ibm.com/docs/containers?topic=containers-images)
 * [Documentation on Kubernetes](https://kubernetes.io/docs/concepts/containers/images/)
@@ -183,7 +183,7 @@ _Note:_ If you change the name of Kubernetes namespace name, you need to know th
 
 ## 2 Work with the created toolchain <a name="part-SECTION-02"></a>
 
-I the toolchain you see:
+In the toolchain you see:
 
 * **Think** Issues managed in GitLab
 * **Code**  [Eclipse Orion Web IDE](https://cloud.ibm.com/docs/services/ContinuousDelivery?topic=ContinuousDelivery-web_ide) and source code managed in GitLab
