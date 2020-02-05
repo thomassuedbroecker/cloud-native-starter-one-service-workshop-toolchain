@@ -159,14 +159,14 @@ Open the GitLab repository in a new browser tab.
 
 #### Step 3: Go back to the toolchain and visit the delivey pipeline
 
-![Open the delivery pipeline](images/toolchain-10.png)
+![Open the delivery pipeline](images/toolchain-01.gif)
 
 #### Step 4: In the delibery pipeline you see two stages 
 
 Wait until the stages are executed:
 
 * FETCH _Does copy the source code in the Fetch code job, to the pipeline to provide the source code as an input for the DEPLOY SERVICES Stage_
-* DEPLOY SERVICES 
+* DEPLOY SERVICES _Does a build and deploy job to deploy the authors microservice to the Kubernetes cluster on IBM Cloud._
 
 ![Open the delivery pipeline](images/toolchain-11.png)
 
