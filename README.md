@@ -1,4 +1,4 @@
-# Toolchain for 'Cloud Native Starter Workshop - One Service'
+# [Toolchain for the 'Cloud Native Starter Workshop - One Service'](https://github.com/IBM/cloud-native-starter/tree/master/workshop-one-service)
 
 # Table of Content
 
@@ -159,16 +159,18 @@ Open the GitLab repository in a new browser tab.
 
 #### Step 3: Go back to the toolchain and visit the delivey pipeline
 
-![Open the delivery pipeline](images/toolchain-01.gif)
+![Open the delivery pipeline](images/toolchain-10.png)
 
-#### Step 4: In the delibery pipeline you see two stages 
-
-Wait until the stages are executed:
+#### Step 4: In the delivery pipeline you see two stages 
 
 * FETCH _Does copy the source code in the Fetch code job, to the pipeline to provide the source code as an input for the DEPLOY SERVICES Stage_
 * DEPLOY SERVICES _Does a build and deploy job to deploy the authors microservice to the Kubernetes cluster on IBM Cloud._
 
 ![Open the delivery pipeline](images/toolchain-11.png)
+
+Wait until the stages are executed:
+
+![Running delivery pipeline](images/toolchain-01.gif)
 
 
 
