@@ -16,25 +16,25 @@ In the image you get an overview of the authors microservice deployment to the f
 
 ## Table of Content
 
-[IBM Cloud Setup](./#part-SECTION-00)
+[IBM Cloud Setup](#part-SECTION-00)
 
-1. [Register for IBM Cloud](./#part-SETUP-00)
-2. [Insert feature code](./#part-SETUP-01)
-3. [Create a free Kubernetes cluster](./#part-SETUP-02)
-4. [Configure the IBM Cloud Container Registry](./#part-SETUP-03)
+1. [Register for IBM Cloud](#part-SETUP-00)
+2. [Insert feature code](#part-SETUP-01)
+3. [Create a free Kubernetes cluster](#part-SETUP-02)
+4. [Configure the IBM Cloud Container Registry](#part-SETUP-03)
 
-[Toolchain setup and execution](./#part-SECTION-02)
+[Toolchain setup and execution](#part-SECTION-02)
 
-1. [Build a IBM Cloud toolchain](./#part-SETUP-04)
-2. [Work with the created toolchain](./#part-SETUP-05)
+1. [Build a IBM Cloud toolchain](#part-SETUP-04)
+2. [Work with the created toolchain](#part-SETUP-05)
 
-[Verify the deployed authors microservice](./#part-SECTION-03)
+[Verify the deployed authors microservice](#part-SECTION-03)
 
-[Additional information](./#part-SECTION-04)
+[Additional information](#part-SECTION-04)
 
-## IBM Cloud Setup
+## IBM Cloud Setup <a name="part-SECTION-00"></a>
 
-### 1. Register for IBM Cloud
+### 1. Register for IBM Cloud <a name="part-SETUP-00"></a>
 
 #### Step 1: Open a browser window and navigate to the IBM Cloud [Registration page](https://ibm.biz/Bd2JHx).
 
@@ -50,13 +50,13 @@ _Note:_ By default, all new IBM Cloud accounts are set to a [lite account](https
 
 The lite account provides free access to a subset of IBM Cloud resources. Lite accounts **don't need a credit-card** to sign up and they **don't expire** after a certain period of time. In order to create a free Kubernetes cluster, you need a **feature code**.
 
-### 2 Insert feature code
+### 2 Insert feature code <a name="part-SETUP-01"></a>
 
 In order to execute the workshop easily, we provide **feature codes** to create free Kubernetes clusters, so no credit card details are required. To apply the feature code to your [Cloud Account](https://cloud.ibm.com/account), navigate to your "`Account settings`" and then to \("`Manage`" -&gt; "`Account`"\). Enter your unique Feature \(Promo\) Code to upgrade your lite account.
 
 _Note:_ Free clusters expire after one month.
 
-### 3 Create a free Kubernetes Cluster
+### 3 Create a free Kubernetes Cluster <a name="part-SETUP-02"></a>
 
 #### Step 1: Logon to IBM Cloud
 
@@ -88,7 +88,7 @@ The creation of the custer takes up to 20 min.
 
 ![create Kubernetes service](images/ibmcloud-create-kubernetes-3.png)
 
-### 4 Configure the IBM Cloud Container Registry
+### 4 Configure the IBM Cloud Container Registry <a name="part-SETUP-03"></a>
 
 #### Step 1: Select in **Kubernetes** the entry **Registry** and ensure your are in the **Dallas location**.
 
@@ -104,9 +104,9 @@ _Note:_ Namespaces are required to be **unique** across the entire **region** th
 
 ![Verify the namespace was created](images/ibmcloud-configure-container-registry-3.png)
 
-## Toolchain setup and execution
+## Toolchain setup and execution <a name="part-SECTION-01"></a>
 
-### 1 Build a IBM Cloud toolchain
+### 1 Build a IBM Cloud toolchain <a name="part-SETUP-04"></a>	
 
 #### Step 1: Press "Create toolchain"
 
@@ -188,7 +188,7 @@ Wait until the stages and their jobs are executed.
 
 ![Open the delivery pipeline](images/toolchain-11.png)
 
-## Verify the deployed authors microservice &lt;/a&gt;
+## Verify the deployed authors microservice <am name="part-SECTION-03"></a>
 
 #### Step 1: Open the deployment job in a new browser tab
 
@@ -219,7 +219,7 @@ You see following steps in the following gif.
 
 ![Verify the deployment result and open the OpenAPI explorer of the authors microservice and test the microservice](images/toolchain-02.gif)
 
-:star: **Congratulations** :thumbsup: you have finished using the **Toolchain for the 'Cloud Native Starter Workshop' - 'Deploying Java Microservices to Kubernetes on IBM Cloud'** :checkered\_flag:.
+:star: **Congratulations** :thumbsup: you have finished using the **Toolchain for the 'Cloud Native Starter Workshop' - 'Deploying Java Microservices to Kubernetes on IBM Cloud'**.
 
 ## Additional information
 
