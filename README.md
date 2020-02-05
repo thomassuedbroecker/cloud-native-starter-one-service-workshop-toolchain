@@ -223,10 +223,18 @@ Open the **deploy java authors microservice to the Kubernetes cluster** job, in 
 You can see following steps in the gif.
 
 1. Find the URL of the authors OpenAPI explorer in the logs 
-2. Copy the URL in to a browser or just open the URL in a new tab of the current browser
+2. Copy the OpenAPI explorer URL in to a browser or just open the URL in a new tab of the current browser
+![OpenAPI explorer URL](images/toolchain-13.png)
 3. Press "Try it out"
 4. Press "Execute"
 5. Verify the "Reponse body"
+```json
+   {
+    "name": "Niklas Heidloff",
+    "twitter": "https://twitter.com/nheidloff",
+    "blog": "http://heidloff.net"
+    }
+```
 
 ![Verify the deployment result and open the OpenAPI explorer of the authors microservice and test the microservice](images/toolchain-02.gif)
 
