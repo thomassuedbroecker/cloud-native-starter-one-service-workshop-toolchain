@@ -128,7 +128,7 @@ We will clone the _Cloud Native Starter_ project to a repository called **cloud-
 ![Configure the location for the cloned github project](images/toolchain-02.png)
 
 ```diff
-- _Note:_ Depending on your region selection you maybe have to authorize the GitLab hosted in that IBM region.
++ Note: Depending on your region selection you maybe have to authorize the GitLab hosted in that IBM region.
 ```
 
 ![Authorize the GitLab hosted in that IBM region](images/toolchain-03.png)
@@ -137,9 +137,13 @@ We will clone the _Cloud Native Starter_ project to a repository called **cloud-
 
 Enable the toolchain to create services or set configurations in your IBM Cloud Account, for that it needs an "IBM Cloud API key" depending the region you are working in.
 
+```diff
++ Note: You will be informed which name is aready in use.
+```
+
 ![Create a IBM Cloud API key](images/toolchain-04.png)
 
-_Note:_ You will be informed which name is used.
+
 
 ![Notification dialog](images/toolchain-05.png)
 
@@ -150,8 +154,9 @@ Do not change the defaults!
 
 ![IBM Cloud Container Registry and the IBM Cloud Cluster information](images/toolchain-06.png)
 
-_Note:_ Especially don't change the Kubernetes namespace name, because you need to know the image pull secret credentials to access a container registry. 
-For more details visit the following pages.
+```diff
++ Note: Don't change the Kubernetes namespace name, because if you do this, you need to know the image pull secret credentials to access a container registry for that namespace. For more details visit the following pages.
+```
 
 * [Documentation on IBM Cloud](https://cloud.ibm.com/docs/containers?topic=containers-images)
 * [Documentation on Kubernetes](https://kubernetes.io/docs/concepts/containers/images/)
