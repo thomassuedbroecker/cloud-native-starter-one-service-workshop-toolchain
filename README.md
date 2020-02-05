@@ -127,7 +127,9 @@ We will clone the _Cloud Native Starter_ project to a repository called **cloud-
 
 ![Configure the location for the cloned github project](images/toolchain-02.png)
 
-_Note:_ Depending on your region selection you maybe have to authorize the GitLab hosted in that IBM region.
+```diff
+- _Note:_ Depending on your region selection you maybe have to authorize the GitLab hosted in that IBM region.
+```
 
 ![Authorize the GitLab hosted in that IBM region](images/toolchain-03.png)
 
