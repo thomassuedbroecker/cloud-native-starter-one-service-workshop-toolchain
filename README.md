@@ -212,6 +212,12 @@ Wait until the stages are executed:
 
 ![Running delivery pipeline](images/toolchain-01.gif)
 
+#### Step 5: Open the deploy job in a new browser tab
+
+Open the **deploy java authors microservice to the Kubernetes cluster** job, in the **DEPLOY SERVICES** stage of the pipeline.
+
+![Open the deploy job in a new browser tab](images/toolchain-12.png)
+
 ---
 
 # Additional information <a name="part-SECTION-03"></a>
