@@ -114,11 +114,9 @@ _Note:_ Namespaces are required to be **unique** across the entire **region** th
 
 [![Create toolchain](https://cloud.ibm.com/devops/graphics/create_toolchain_button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fthomassuedbroecker%2Fcloud-native-starter-one-service-workshop-toolchain)
 
-#### Step 2: Select the us-south region
+#### Step 2: Select the Dalles as region
 
-TBD
-
-![Select the us-south region](images/toolchain-01.png)
+![Select the Dalles region](images/toolchain-01.png)
 
 
 #### Step 3: Configure the location for the cloned github project
