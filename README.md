@@ -1,8 +1,8 @@
 # [Toolchain for the 'Cloud Native Starter Workshop' - 'Deploying Java Microservices to Kubernetes on IBM Cloud'](https://github.com/IBM/cloud-native-starter/tree/master/workshop-one-service)
 
-This protect does automate the deployment of the authors microservice of the Cloud Native Starter workshop [Deploying Java Microservices to Kubernetes on IBM Cloud](https://github.com/IBM/cloud-native-starter/tree/master/workshop-one-service) to a free Kubernetes cluster on IBM Cloud.
+This protect does automate the deployment in [Lab 4](https://github.com/IBM/cloud-native-starter/blob/master/workshop-one-service/4-kubernetes.md) of the authors microservice of the Cloud Native Starter workshop [Deploying Java Microservices to Kubernetes on IBM Cloud](https://github.com/IBM/cloud-native-starter/tree/master/workshop-one-service) to a free Kubernetes cluster on IBM Cloud.
 
-It automates all steps you need to do:
+That are the steps it automates:
 
 * Build the container for the authors microservice
 * Save the container in the IBM Cloud Registry
@@ -15,15 +15,21 @@ In the image you get an overview of the authors microservice deployment to the f
 
 # Table of Content
 
+[IBM Cloud Setup](#part-SECTION-00)
 1. [Register for IBM Cloud](#part-SETUP-00)
 2. [Insert feature code](#part-SETUP-01)
 3. [Create a free Kubernetes cluster](#part-SETUP-02)
 4. [Configure the IBM Cloud Container Registry](#part-SETUP-03)
-5. [Build a IBM Cloud toolchain](#part-SETUP-04)
-6. [Work with the created toolchain](#part-SETUP-05)
+
+[Toolchain setup and execution](#part-SECTION-02)
+1. [Build a IBM Cloud toolchain](#part-SETUP-04)
+2. [Work with the created toolchain](#part-SETUP-05)
 
 
-# 1. Register for IBM Cloud <a name="part-SETUP-00"></a>
+
+# IBM Cloud Setup <a name="part-SECTION-00"></a>
+
+## 1. Register for IBM Cloud <a name="part-SETUP-00"></a>
 
 #### Step 1: Open a browser window and navigate to the IBM Cloud [Registration page](https://ibm.biz/Bd2JHx).
 
@@ -42,7 +48,7 @@ In order to create a free Kubernetes cluster, you need a **feature code**.
 
 ---
 
-# 2 Insert feature code <a name="part-SETUP-01"></a>
+## 2 Insert feature code <a name="part-SETUP-01"></a>
 
 In order to execute the workshop easily, we provide **feature codes** to create free Kubernetes clusters, so no credit card details are required.
 To apply the feature code to your [Cloud Account](https://cloud.ibm.com/account), navigate to your "`Account settings`" and then to ("`Manage`" -> "`Account`").
@@ -52,7 +58,7 @@ _Note:_ Free clusters expire after one month.
 
 ---
 
-# 3 Create a free Kubernetes Cluster <a name="part-SETUP-02"></a>
+## 3 Create a free Kubernetes Cluster <a name="part-SETUP-02"></a>
 
 #### Step 1: Logon to IBM Cloud
 
@@ -84,7 +90,7 @@ The creation of the custer takes up to 20 min.
 
 ![create Kubernetes service](images/ibmcloud-create-kubernetes-3.png)
 
-# 4 Configure the IBM Cloud Container Registry <a name="part-SETUP-03"></a>
+## 4 Configure the IBM Cloud Container Registry <a name="part-SETUP-03"></a>
 
 #### Step 1: Select in **Kubernetes** the entry **Registry** and ensure your are in the **Dallas location**.
 
@@ -100,7 +106,9 @@ _Note:_ Namespaces are required to be **unique** across the entire **region** th
 
 ![Verify the namespace was created](images/ibmcloud-configure-container-registry-3.png)
 
-# 5 Build a IBM Cloud toolchain <a name="part-SETUP-04"></a>
+# Toolchain setup and execution <a name="part-SECTION-00"></a>
+
+## 1 Build a IBM Cloud toolchain <a name="part-SETUP-04"></a>
 
 #### Step 1: Press "Create toolchain"
 
@@ -152,7 +160,7 @@ For more details visit the following pages.
 
 ![Press Create](images/toolchain-07.png)
 
-# 6 Work with the created toolchain <a name="part-SETUP-05"></a>
+## 2 Work with the created toolchain <a name="part-SETUP-05"></a>
 
 I the toolchain you see:
 
