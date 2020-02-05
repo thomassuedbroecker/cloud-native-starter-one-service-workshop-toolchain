@@ -141,6 +141,14 @@ For more details visit the following pages.
 
 # 6 Work with the created toolchain <a name="part-SETUP-05"></a>
 
+#### Step 1: Visit the create GitLab project inside IBM Cloud
+
+Open the GitLab repository in a new browser tab.
+
+![Press Create](images/toolchain-08.png)
+
+#### Step 2: Open the 
+
 
 
 # 7 Information resources about developing a open toolchain
