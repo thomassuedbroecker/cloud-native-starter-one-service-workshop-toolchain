@@ -221,7 +221,7 @@ You see following steps in the following gif.
 
 :star: **Congratulations** :thumbsup: you have finished using the **Toolchain for the 'Cloud Native Starter Workshop' - 'Deploying Java Microservices to Kubernetes on IBM Cloud'**.
 
-## Additional information <am name="part-SECTION-04"></a>
+## Additional information <a name="part-SECTION-04"></a>
 
 ### Information resources about developing a open toolchain
 
