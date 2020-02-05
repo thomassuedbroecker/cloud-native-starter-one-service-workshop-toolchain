@@ -218,7 +218,7 @@ Open the **deploy java authors microservice to the Kubernetes cluster** job, in 
 
 ![Open the deploy job in a new browser tab](images/toolchain-12.png)
 
-#### Step 6: Verify the deployment job logs and open the OpenAPI explorer of the authors microservice
+#### Step 6: Verify the deployment job logs and open the OpenAPI explorer of the authors microservice and test the microservice
 
 You can see following steps in the gif.
 
@@ -228,7 +228,7 @@ You can see following steps in the gif.
 4. Press "Execute"
 5. Verify the "Reponse body"
 
-![Verify the deployment result and open the OpenAPI explorer of the authors microservice](images/toolchain-02.gif)
+![Verify the deployment result and open the OpenAPI explorer of the authors microservice and test the microservice](images/toolchain-02.gif)
 
 
 You can verfiy the 
