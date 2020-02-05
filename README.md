@@ -1,4 +1,6 @@
-# [Toolchain for the 'Cloud Native Starter Workshop - One Service'](https://github.com/IBM/cloud-native-starter/tree/master/workshop-one-service)
+# [Toolchain for the 'Cloud Native Starter Workshop' - 'Deploying Java Microservices to Kubernetes on IBM Cloud'](https://github.com/IBM/cloud-native-starter/tree/master/workshop-one-service)
+
+This protect does automate the deployment of the authors microservice of the cloud native starter workshop [Deploying Java Microservices to Kubernetes on IBM Cloud](https://github.com/IBM/cloud-native-starter/tree/master/workshop-one-service) to a free Kubernetes cluster on IBM Cloud.
 
 # Table of Content
 
