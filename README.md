@@ -222,7 +222,7 @@ Open the **deploy java authors microservice to the Kubernetes cluster** job, in 
 
 #### Step 2: Verify the deployment job logs and open the OpenAPI explorer of the authors microservice and test the microservice
 
-You can see following steps in the gif.
+You see following steps in the following gif.
 
 1. Find the URL of the authors OpenAPI explorer in the logs 
 2. Copy the OpenAPI explorer URL in to a browser or just open the URL in a new tab of the current browser
@@ -240,8 +240,9 @@ You can see following steps in the gif.
 
 ![Verify the deployment result and open the OpenAPI explorer of the authors microservice and test the microservice](images/toolchain-02.gif)
 
+---
 
-You can verfiy the 
+:star: **Congratulations** :thumbsup: you have finished using the **Toolchain for the 'Cloud Native Starter Workshop' - 'Deploying Java Microservices to Kubernetes on IBM Cloud'** :checkered_flag:.
 
 ---
 
