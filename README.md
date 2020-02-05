@@ -98,7 +98,7 @@ The creation of the custer takes up to 20 min.
 
 ![The create a namespace with a unique name cloud-native](images/ibmcloud-configure-container-registry-2.png)
 
-_Note:_ Namespaces are required to be **unique** across the entire **region** that the **specific registry** is located in, not just **\*unique to your account**. This is mentioned in the following [public documentation](https://cloud.ibm.com/docs/services/Registry?topic=registry-getting-started#gs_registry_namespace_add).
+_Note:_ Namespaces are required to be **unique** across the entire **region** that the **specific registry** is located in, not just **unique to your account**. This is mentioned in the following [public documentation](https://cloud.ibm.com/docs/services/Registry?topic=registry-getting-started#gs_registry_namespace_add).
 
 #### Step 3: Verify the namespace was created
 
@@ -157,7 +157,7 @@ _Note:_ If you change the Kubernetes namespace name, you need to be aware that y
 
 ![Press Create](images/toolchain-07.png)
 
-### 2 Work with the created toolchain
+### 2 Work with the created toolchain <a name="part-SETUP-05"></a>
 
 In the toolchain you see:
 
@@ -221,7 +221,7 @@ You see following steps in the following gif.
 
 :star: **Congratulations** :thumbsup: you have finished using the **Toolchain for the 'Cloud Native Starter Workshop' - 'Deploying Java Microservices to Kubernetes on IBM Cloud'**.
 
-## Additional information
+## Additional information <am name="part-SECTION-04"></a>
 
 ### Information resources about developing a open toolchain
 
