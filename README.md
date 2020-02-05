@@ -12,6 +12,7 @@ In the image you get an overview of the authors microservice deployment to the f
 
 ![verview of the authors microservice deployment](images/lab-4-overview.png)
 
+---
 
 # Table of Content
 
@@ -25,9 +26,13 @@ In the image you get an overview of the authors microservice deployment to the f
 1. [Build a IBM Cloud toolchain](#part-SETUP-04)
 2. [Work with the created toolchain](#part-SETUP-05)
 
+[Additional information](#part-SECTION-03)
 
+---
 
 # IBM Cloud Setup <a name="part-SECTION-00"></a>
+
+---
 
 ## 1. Register for IBM Cloud <a name="part-SETUP-00"></a>
 
@@ -90,6 +95,8 @@ The creation of the custer takes up to 20 min.
 
 ![create Kubernetes service](images/ibmcloud-create-kubernetes-3.png)
 
+---
+
 ## 4 Configure the IBM Cloud Container Registry <a name="part-SETUP-03"></a>
 
 #### Step 1: Select in **Kubernetes** the entry **Registry** and ensure your are in the **Dallas location**.
@@ -106,7 +113,11 @@ _Note:_ Namespaces are required to be **unique** across the entire **region** th
 
 ![Verify the namespace was created](images/ibmcloud-configure-container-registry-3.png)
 
-# Toolchain setup and execution <a name="part-SECTION-00"></a>
+---
+
+# Toolchain setup and execution <a name="part-SECTION-01"></a>
+
+---
 
 ## 1 Build a IBM Cloud toolchain <a name="part-SETUP-04"></a>
 
@@ -127,9 +138,9 @@ We will clone the _Cloud Native Starter_ project to a repository called **cloud-
 
 ![Configure the location for the cloned github project](images/toolchain-02.png)
 
-```diff
-+ Note: Depending on your region selection you maybe have to authorize the GitLab hosted in that IBM region.
-```
+
+_Note:_ Depending on your region selection you maybe have to authorize the GitLab hosted in that IBM region.
+
 
 ![Authorize the GitLab hosted in that IBM region](images/toolchain-03.png)
 
@@ -137,13 +148,13 @@ We will clone the _Cloud Native Starter_ project to a repository called **cloud-
 
 Enable the toolchain to create services or set configurations in your IBM Cloud Account, for that it needs an "IBM Cloud API key" depending the region you are working in.
 
-```diff
-+ Note: You will be informed which name is aready in use.
-```
+_Note:_ You will be informed which name is already in use.
+
+* Create a IBM Cloud API key
 
 ![Create a IBM Cloud API key](images/toolchain-04.png)
 
-
+* Notification dialog
 
 ![Notification dialog](images/toolchain-05.png)
 
@@ -154,9 +165,8 @@ Do not change the defaults!
 
 ![IBM Cloud Container Registry and the IBM Cloud Cluster information](images/toolchain-06.png)
 
-```diff
-+ Note: Don't change the Kubernetes namespace name, because if you do this, you need to know the image pull secret credentials to access a container registry for that namespace. For more details visit the following pages.
-```
+
+_Note:_ If you change the name of Kubernetes namespace name, you need to know the image pull secret credentials to access a container registry for that namespace. For more details please visit the following pages.
 
 * [Documentation on IBM Cloud](https://cloud.ibm.com/docs/containers?topic=containers-images)
 * [Documentation on Kubernetes](https://kubernetes.io/docs/concepts/containers/images/)
@@ -164,6 +174,8 @@ Do not change the defaults!
 #### Step 6: Press "Create"
 
 ![Press Create](images/toolchain-07.png)
+
+---
 
 ## 2 Work with the created toolchain <a name="part-SETUP-05"></a>
 
@@ -198,9 +210,11 @@ Wait until the stages are executed:
 
 ![Running delivery pipeline](images/toolchain-01.gif)
 
+---
 
+# Additional information <a name="part-SECTION-03"></a>
 
-# 7 Information resources about developing a open toolchain
+## Information resources about developing a open toolchain
 
 * [Creating Custom Toolchain Templates](https://github.com/open-toolchain/sdk/wiki/Creating-Custom-Toolchain-Templates)
 * [Configuring tool integrations](https://cloud.ibm.com/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations)
