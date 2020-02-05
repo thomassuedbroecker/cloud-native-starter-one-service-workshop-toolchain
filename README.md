@@ -28,6 +28,8 @@ In the image you get an overview of the authors microservice deployment to the f
 1. [Build a IBM Cloud toolchain](#part-SETUP-04)
 2. [Work with the created toolchain](#part-SETUP-05)
 
+[Verify the deployed authors microservice](#part-SECTION-03)
+
 [Additional information](#part-SECTION-03)
 
 ---
@@ -179,7 +181,7 @@ _Note:_ If you change the name of Kubernetes namespace name, you need to know th
 
 ---
 
-## 2 Work with the created toolchain <a name="part-SETUP-05"></a>
+## 2 Work with the created toolchain <a name="part-SECTION-02"></a>
 
 I the toolchain you see:
 
@@ -203,22 +205,22 @@ Open the GitLab repository in a new browser tab.
 
 #### Step 4: In the delivery pipeline you see two stages 
 
+Wait until the stages and their jobs are executed.
+
 * FETCH _Does copy the source code in the Fetch code job, to the pipeline to provide the source code as an input for the DEPLOY SERVICES Stage_
 * DEPLOY SERVICES _Does a build and deploy job to deploy the authors microservice to the Kubernetes cluster on IBM Cloud._
 
 ![Open the delivery pipeline](images/toolchain-11.png)
 
-Wait until the stages are executed:
+## 3 Verify the deployed authors microservice <am name="part-SECTION-03"></a>
 
-![Running delivery pipeline](images/toolchain-01.gif)
-
-#### Step 5: Open the deployment job in a new browser tab
+#### Step 1: Open the deployment job in a new browser tab
 
 Open the **deploy java authors microservice to the Kubernetes cluster** job, in the **DEPLOY SERVICES** stage of the pipeline.
 
 ![Open the deploy job in a new browser tab](images/toolchain-12.png)
 
-#### Step 6: Verify the deployment job logs and open the OpenAPI explorer of the authors microservice and test the microservice
+#### Step 2: Verify the deployment job logs and open the OpenAPI explorer of the authors microservice and test the microservice
 
 You can see following steps in the gif.
 
