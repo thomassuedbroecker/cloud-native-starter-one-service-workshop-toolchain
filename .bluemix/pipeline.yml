@@ -159,8 +159,9 @@
         clusterip=$(ibmcloud ks workers --cluster $PROD_CLUSTER_NAME | awk '/Ready/ {print $2;exit;}')
        
         echo /----------------------------------
-        echo $clusterip
-        echo $nodeport
-        echo Sample API call: \"curl 'http://${clusterip}:${nodeport}/api/v1/getauthor?name=Niklas%20Heidloff'\"
+        echo Cluster IP: $clusterip
+        echo NodePort: $nodeport
+        echo Authors OpenAPI explorer: http://$clusterip:$nodeport/openapi/ui
+        echo Example for Authors API call: curl http://$clusterip:$nodeport/api/v1/getauthor?name=Niklas%20Heidloff
         echo /----------------------------------
   

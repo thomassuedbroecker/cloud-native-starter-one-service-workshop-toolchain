@@ -212,11 +212,26 @@ Wait until the stages are executed:
 
 ![Running delivery pipeline](images/toolchain-01.gif)
 
-#### Step 5: Open the deploy job in a new browser tab
+#### Step 5: Open the deployment job in a new browser tab
 
 Open the **deploy java authors microservice to the Kubernetes cluster** job, in the **DEPLOY SERVICES** stage of the pipeline.
 
 ![Open the deploy job in a new browser tab](images/toolchain-12.png)
+
+#### Step 6: Verify the deployment job logs and open the OpenAPI explorer of the authors microservice
+
+You can see following steps in the gif.
+
+1. Find the URL of the authors OpenAPI explorer in the logs 
+2. Copy the URL in to a browser or just open the URL in a new tab of the current browser
+3. Press "Try it out"
+4. Press "Execute"
+5. Verify the "Reponse body"
+
+![Verify the deployment result and open the OpenAPI explorer of the authors microservice](images/toolchain-02.gif)
+
+
+You can verfiy the 
 
 ---
 
