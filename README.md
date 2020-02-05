@@ -12,7 +12,7 @@ That are the steps the toolchain automates:
 
 In the image you get an overview of the authors microservice deployment to the free IBM Cloud Kubernetes Cluster.
 
-![verview of the authors microservice deployment](.gitbook/assets/lab-4-overview.png)
+![verview of the authors microservice deployment](images/lab-4-overview.png)
 
 ## Table of Content
 
@@ -38,11 +38,11 @@ In the image you get an overview of the authors microservice deployment to the f
 
 #### Step 1: Open a browser window and navigate to the IBM Cloud [Registration page](https://ibm.biz/Bd2JHx).
 
-![Registration](.gitbook/assets/registration.png)
+![Registration](images/registration.png)
 
 #### Step 2: Fill in the registration form and follow the link in the **confirmation email** to confirm your account once it arrives.
 
-![Email Validation](.gitbook/assets/email.png)
+![Email Validation](images/email.png)
 
 #### Step 3: [Login into IBM Cloud](https://ibm.biz/Bd2JHx) using your account credentials.
 
@@ -62,13 +62,13 @@ _Note:_ Free clusters expire after one month.
 
 #### Step 2: Select in the menu "Catalog" and search for "Kubernetes Cluster"
 
-![Kubernetes service](.gitbook/assets/ibmcloud-catalog.png)
+![Kubernetes service](images/ibmcloud-catalog.png)
 
 #### Step 3: Click on "Kubernetes Cluster"
 
 #### Step 4: Press "Create"
 
-![create Kubernetes service](.gitbook/assets/ibmcloud-create-kubernetes-1.png)
+![create Kubernetes service](images/ibmcloud-create-kubernetes-1.png)
 
 #### Step 5: Click on the Kubernetes Services and select "Free"
 
@@ -78,7 +78,7 @@ Ensure you set following values in the creation dialog and don't change the rema
 
 _Note:_ In the new IBM Cloud UI it seems the enties for Geography and Metro are no longer available.
 
-![create Kubernetes service](.gitbook/assets/ibmcloud-create-kubernetes-2.png)
+![create Kubernetes service](images/ibmcloud-create-kubernetes-2.png)
 
 #### Step 6: Press "Create custer"
 
@@ -86,23 +86,23 @@ _Note:_ In the new IBM Cloud UI it seems the enties for Geography and Metro are 
 
 The creation of the custer takes up to 20 min.
 
-![create Kubernetes service](.gitbook/assets/ibmcloud-create-kubernetes-3.png)
+![create Kubernetes service](images/ibmcloud-create-kubernetes-3.png)
 
 ### 4 Configure the IBM Cloud Container Registry
 
 #### Step 1: Select in **Kubernetes** the entry **Registry** and ensure your are in the **Dallas location**.
 
-![Select in Kubernetes the entry Registry](.gitbook/assets/ibmcloud-configure-container-registry-1.png)
+![Select in Kubernetes the entry Registry](images/ibmcloud-configure-container-registry-1.png)
 
 #### Step 2: The create a namespace with a unique name cloud-native-\[YOURNAME\]
 
-![The create a namespace with a unique name cloud-native](.gitbook/assets/ibmcloud-configure-container-registry-2.png)
+![The create a namespace with a unique name cloud-native](images/ibmcloud-configure-container-registry-2.png)
 
 _Note:_ Namespaces are required to be **unique** across the entire **region** that the **specific registry** is located in, not just **\*unique to your account**. This is mentioned in the following [public documentation](https://cloud.ibm.com/docs/services/Registry?topic=registry-getting-started#gs_registry_namespace_add).
 
 #### Step 3: Verify the namespace was created
 
-![Verify the namespace was created](.gitbook/assets/ibmcloud-configure-container-registry-3.png)
+![Verify the namespace was created](images/ibmcloud-configure-container-registry-3.png)
 
 ## Toolchain setup and execution
 
@@ -114,7 +114,7 @@ _Note:_ Namespaces are required to be **unique** across the entire **region** th
 
 #### Step 2: Select the Dalles as region
 
-![Select the Dalles region](.gitbook/assets/toolchain-01.png)
+![Select the Dalles region](images/toolchain-01.png)
 
 #### Step 3: Configure the location for the cloned github project
 
@@ -122,11 +122,11 @@ I our situation we use **git repos and issue tracking hosted by IBM and built on
 
 We will clone the _Cloud Native Starter_ project to a repository called **cloud-native-starter-one-service-workshop**-TIMESTAMP.
 
-![Configure the location for the cloned github project](.gitbook/assets/toolchain-02.png)
+![Configure the location for the cloned github project](images/toolchain-02.png)
 
 _Note:_ Depending on your region selection you maybe have to authorize the GitLab hosted in that IBM region.
 
-![Authorize the GitLab hosted in that IBM region](.gitbook/assets/toolchain-03.png)
+![Authorize the GitLab hosted in that IBM region](images/toolchain-03.png)
 
 #### Step 4: Create a IBM Cloud API key by pressing "new" and "ok"
 
@@ -136,17 +136,17 @@ _Note:_ You will be informed which name is already in use.
 
 * Create a IBM Cloud API key
 
-![Create a IBM Cloud API key](.gitbook/assets/toolchain-04.png)
+![Create a IBM Cloud API key](images/toolchain-04.png)
 
 * Notification dialog
 
-![Notification dialog](.gitbook/assets/toolchain-05.png)
+![Notification dialog](images/toolchain-05.png)
 
 #### Step 5: Verify the configuration
 
 You see your the relevant information of your created IBM Cloud Container Registry and the IBM Cloud Cluster. Do not change the defaults!
 
-![IBM Cloud Container Registry and the IBM Cloud Cluster information](.gitbook/assets/toolchain-06.png)
+![IBM Cloud Container Registry and the IBM Cloud Cluster information](images/toolchain-06.png)
 
 _Note:_ If you change the Kubernetes namespace name, you need to be aware that you have to know the image pull secret credentials to access a container registry. For more details please visit the following pages.
 
@@ -155,7 +155,7 @@ _Note:_ If you change the Kubernetes namespace name, you need to be aware that y
 
 #### Step 6: Press "Create"
 
-![Press Create](.gitbook/assets/toolchain-07.png)
+![Press Create](images/toolchain-07.png)
 
 ### 2 Work with the created toolchain
 
@@ -169,15 +169,15 @@ In the toolchain you see:
 
 Open the GitLab repository in a new browser tab.
 
-![Open the GitLab repository in a new browser tab](.gitbook/assets/toolchain-08.png)
+![Open the GitLab repository in a new browser tab](images/toolchain-08.png)
 
 #### Step 2: Take a look in the cloned Cloud Native Starter project
 
-![Take a look in the cloned Cloud Native Starter project](.gitbook/assets/toolchain-09.png)
+![Take a look in the cloned Cloud Native Starter project](images/toolchain-09.png)
 
 #### Step 3: Go back to the toolchain and visit the delivey pipeline
 
-![Open the delivery pipeline](.gitbook/assets/toolchain-10.png)
+![Open the delivery pipeline](images/toolchain-10.png)
 
 #### Step 4: In the delivery pipeline you see two stages
 
@@ -186,7 +186,7 @@ Wait until the stages and their jobs are executed.
 * FETCH _Does copy the source code in the Fetch code job, to the pipeline to provide the source code as an input for the DEPLOY SERVICES Stage_
 * DEPLOY SERVICES _Does a build and deploy job to deploy the authors microservice to the Kubernetes cluster on IBM Cloud._
 
-![Open the delivery pipeline](.gitbook/assets/toolchain-11.png)
+![Open the delivery pipeline](images/toolchain-11.png)
 
 ## Verify the deployed authors microservice &lt;/a&gt;
 
@@ -194,7 +194,7 @@ Wait until the stages and their jobs are executed.
 
 Open the **deploy java authors microservice to the Kubernetes cluster** job, in the **DEPLOY SERVICES** stage of the pipeline.
 
-![Open the deploy job in a new browser tab](.gitbook/assets/toolchain-12.png)
+![Open the deploy job in a new browser tab](images/toolchain-12.png)
 
 #### Step 2: Verify the deployment job logs and open the OpenAPI explorer of the authors microservice and test the microservice
 
@@ -203,7 +203,7 @@ You see following steps in the following gif.
 1. Find the URL of the authors OpenAPI explorer in the logs 
 2. Copy the OpenAPI explorer URL in to a browser or just open the URL in a new tab of the current browser
 
-   ![OpenAPI explorer URL](.gitbook/assets/toolchain-13.png)
+   ![OpenAPI explorer URL](images/toolchain-13.png)
 
 3. Press "Try it out"
 4. Press "Execute"
@@ -217,7 +217,7 @@ You see following steps in the following gif.
     }
    ```
 
-![Verify the deployment result and open the OpenAPI explorer of the authors microservice and test the microservice](.gitbook/assets/toolchain-02.gif)
+![Verify the deployment result and open the OpenAPI explorer of the authors microservice and test the microservice](images/toolchain-02.gif)
 
 :star: **Congratulations** :thumbsup: you have finished using the **Toolchain for the 'Cloud Native Starter Workshop' - 'Deploying Java Microservices to Kubernetes on IBM Cloud'** :checkered\_flag:.
 
