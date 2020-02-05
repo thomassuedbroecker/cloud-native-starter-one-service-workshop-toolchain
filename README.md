@@ -17,12 +17,14 @@ In the image you get an overview of the authors microservice deployment to the f
 # Table of Content
 
 [IBM Cloud Setup](#part-SECTION-00)
+
 1. [Register for IBM Cloud](#part-SETUP-00)
 2. [Insert feature code](#part-SETUP-01)
 3. [Create a free Kubernetes cluster](#part-SETUP-02)
 4. [Configure the IBM Cloud Container Registry](#part-SETUP-03)
 
 [Toolchain setup and execution](#part-SECTION-02)
+
 1. [Build a IBM Cloud toolchain](#part-SETUP-04)
 2. [Work with the created toolchain](#part-SETUP-05)
 
