@@ -116,13 +116,13 @@ _Note:_ Namespaces are required to be **unique** across the entire **region** th
 
 ![Select the Dalles region](images/toolchain-01.png)
 
-#### Step 3: Configure the location for the cloned github project
+#### Step 3: Configure the location for the cloned GitHub project
 
 I our situation we use **git repos and issue tracking hosted by IBM and built on GitLab Community Edition**.
 
 We will clone the _Cloud Native Starter_ project to a repository called **cloud-native-starter-one-service-workshop**-TIMESTAMP.
 
-![Configure the location for the cloned github project](images/toolchain-02.png)
+![Configure the location for the cloned GitHub project](images/toolchain-02.png)
 
 _Note:_ Depending on your region selection you maybe have to authorize the GitLab hosted in that IBM region.
 
