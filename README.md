@@ -10,7 +10,7 @@ That are the steps the toolchain automates:
 * Save the container in the IBM Cloud Registry
 * Deploy the authors microservice to the free Kubernetes cluster on IBM Cloud
 
-In the image you get an overview of the authors microservice deployment to the free IBM Cloud Kubernetes Cluster.
+In the following image you get an overview of the authors microservice deployment to the free IBM Cloud Kubernetes Cluster.
 
 ![verview of the authors microservice deployment](images/lab-4-overview.png)
 
@@ -85,6 +85,7 @@ _Note:_ In the new IBM Cloud UI it seems the enties for Geography and Metro are 
 #### Step 7: Now you will be forwarded to your cluster on IBM Cloud and you can verify the status of the creation of your cluster
 
 The creation of the custer takes up to 20 min.
+> _Note:_ If you in a hands-on session please inform your instructor that you have finished step 7.
 
 ![create Kubernetes service](images/ibmcloud-create-kubernetes-3.png)
 
