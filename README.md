@@ -149,7 +149,7 @@ You see your the relevant information of your created IBM Cloud Container Regist
 
 ![IBM Cloud Container Registry and the IBM Cloud Cluster information](images/toolchain-06.png)
 
-_Note:_ If you change the Kubernetes namespace name, you need to be aware that you have to know the image pull secret credentials to access a container registry. For more details please visit the following pages.
+_Note:_ If you change the Kubernetes namespace name, you need to be aware of the image pull secret credentials to access a container registry. For more details please visit the following pages.
 
 * [Documentation on IBM Cloud](https://cloud.ibm.com/docs/containers?topic=containers-images)
 * [Documentation on Kubernetes](https://kubernetes.io/docs/concepts/containers/images/)
@@ -197,7 +197,7 @@ Open the **deploy java authors microservice to the Kubernetes cluster** job, in 
 
 ![Open the deploy job in a new browser tab](images/toolchain-12.png)
 
-#### Step 2: Verify the deployment job logs and open the OpenAPI explorer of the authors microservice and test the microservice
+#### Step 2: Verify the deployment job logs and open the OpenAPI explorer of the authors microservice to test the microservice
 
 You see following steps in the following gif.
 
@@ -220,7 +220,7 @@ You see following steps in the following gif.
 
 ![Verify the deployment result and open the OpenAPI explorer of the authors microservice and test the microservice](images/toolchain-02.gif)
 
-:star: **Congratulations** :thumbsup: you have finished using the **Toolchain for the 'Cloud Native Starter Workshop' - 'Deploying Java Microservices to Kubernetes on IBM Cloud'**.
+:star: **Congratulations** :thumbsup: you have finished the workshop.
 
 ## Additional information <a name="part-SECTION-04"></a>
 
