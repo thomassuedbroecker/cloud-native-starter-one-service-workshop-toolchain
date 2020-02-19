@@ -1,6 +1,6 @@
 # Use a IBM Cloud toolchain to deploy a Java Microservices to Kubernetes on IBM Cloud
 
-## [Toolchain for the 'Cloud Native Starter Workshop' - 'Build a Java Microservice and deploy the Microservice to Kubernetes on IBM Cloud'](https://github.com/IBM/cloud-native-starter/tree/master/workshop-one-service)
+## [Toolchain for the - 'Build a Java Microservice and deploy the Microservice to Kubernetes on IBM Cloud' - workshop](https://github.com/IBM/cloud-native-starter/tree/master/workshop-one-service)
  
 This project does automate the deployment in [Lab 4](https://github.com/IBM/cloud-native-starter/blob/master/workshop-one-service/4-kubernetes.md) of the authors microservice of the Cloud Native Starter workshop [Build a Java Microservice and deploy the Microservice to Kubernetes on IBM Cloud](https://github.com/IBM/cloud-native-starter/tree/master/workshop-one-service) to a free Kubernetes cluster on IBM Cloud.
 
