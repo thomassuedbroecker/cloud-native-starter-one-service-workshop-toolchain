@@ -107,15 +107,22 @@ _Note:_ Namespaces are required to be **unique** across the entire **region** th
 
 ## Toolchain setup and execution <a name="part-SECTION-01"></a>
 
+
 ### 1 Build a IBM Cloud toolchain <a name="part-SETUP-04"></a>	
 
 #### Step 1: Press "Create toolchain"
 
 [![Create toolchain](https://cloud.ibm.com/devops/graphics/create_toolchain_button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fthomassuedbroecker%2Fcloud-native-starter-one-service-workshop-toolchain)
 
-#### Step 2: Select the Dalles as region
+#### Step 2: Select the Dallas as region
 
-![Select the Dalles region](images/toolchain-01.png)
+![Select the Dallas region](images/toolchain-01.png)
+
+> _Note:_ If you already have an [Continous Delivery](https://cloud.ibm.com/docs/ContinuousDelivery?topic=ContinuousDelivery-getting-started) service instance using a [Lite plan](https://cloud.ibm.com/docs/services/Db2onCloud?topic=Db2onCloud-free_plan) in your IBM Could Account, you must choose the region for your Toolchain where you instantiated your service. _The image below shows the warning._
+
+![Warning](images/ibmcloud-continuous-delivery-warning.png)
+
+
 
 #### Step 3: Configure the location for the cloned GitHub project
 
