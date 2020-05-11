@@ -32,13 +32,19 @@ In the following image you get an overview of the authors microservice deploymen
 
 [Additional information](#part-SECTION-04)
 
-## IBM Cloud Setup <a name="part-SECTION-00"></a>
+## **IBM Cloud Setup** <a name="part-SECTION-00"></a>
 
-### 1. Register for IBM Cloud <a name="part-SETUP-00"></a>
+---
+
+### **1. Register for IBM Cloud** <a name="part-SETUP-00"></a>
+
+---
 
 #### Step 1: Open a browser window and navigate to the IBM Cloud [Registration page](https://ibm.biz/Bd2JHx).
 
 ![Registration](images/registration.png)
+
+---
 
 #### Step 2: Fill in the registration form and follow the link in the **confirmation email** to confirm your account once it arrives.
 
@@ -50,25 +56,37 @@ _Note:_ By default, all new IBM Cloud accounts are set to a [lite account](https
 
 The lite account provides free access to a subset of IBM Cloud resources. Lite accounts **don't need a credit-card** to sign up and they **don't expire** after a certain period of time. In order to create a free Kubernetes cluster, you need a **feature code**.
 
-### 2 Insert feature code <a name="part-SETUP-01"></a>
+### **2 Insert feature code** <a name="part-SETUP-01"></a>
 
 In order to execute the workshop easily, we provide **feature codes** to create free Kubernetes clusters, so no credit card details are required. To apply the feature code to your [Cloud Account](https://cloud.ibm.com/account), navigate to your "`Account settings`" and then to \("`Manage`" -&gt; "`Account`"\). Enter your unique Feature \(Promo\) Code to upgrade your lite account.
 
 _Note:_ Free clusters expire after one month.
 
-### 3 Create a free Kubernetes Cluster <a name="part-SETUP-02"></a>
+---
+
+### **3. Create a free Kubernetes Cluster** <a name="part-SETUP-02"></a>
+
+---
 
 #### Step 1: Logon to IBM Cloud
 
+---
+
 #### Step 2: Select in the menu "Catalog" and search for "Kubernetes Cluster"
+
+---
 
 ![Kubernetes service](images/ibmcloud-catalog.png)
 
 #### Step 3: Click on "Kubernetes Cluster"
 
+---
+
 #### Step 4: Press "Create"
 
 ![create Kubernetes service](images/ibmcloud-create-kubernetes-1.png)
+
+---
 
 #### Step 5: Click on the Kubernetes Services and select "Free"
 
@@ -82,6 +100,8 @@ _Note:_ In the new IBM Cloud UI it seems the enties for Geography and Metro are 
 
 #### Step 6: Press "Create custer"
 
+---
+
 #### Step 7: Now you will be forwarded to your cluster on IBM Cloud and you can verify the status of the creation of your cluster
 
 The creation of the custer takes up to 20 min.
@@ -89,11 +109,15 @@ The creation of the custer takes up to 20 min.
 
 ![create Kubernetes service](images/ibmcloud-create-kubernetes-3.png)
 
-### 4 Configure the IBM Cloud Container Registry <a name="part-SETUP-03"></a>
+### **4. Configure the IBM Cloud Container Registry** <a name="part-SETUP-03"></a>
+
+---
 
 #### Step 1: Select in **Kubernetes** the entry **Registry** and ensure your are in the **Dallas location**.
 
 ![Select in Kubernetes the entry Registry](images/ibmcloud-configure-container-registry-1.png)
+
+---
 
 #### Step 2: The create a namespace with a unique name cloud-native-\[YOURNAME\]
 
@@ -101,18 +125,25 @@ The creation of the custer takes up to 20 min.
 
 _Note:_ Namespaces are required to be **unique** across the entire **region** that the **specific registry** is located in, not just **unique to your account**. This is mentioned in the following [public documentation](https://cloud.ibm.com/docs/services/Registry?topic=registry-getting-started#gs_registry_namespace_add).
 
+---
+
 #### Step 3: Verify the namespace was created
 
 ![Verify the namespace was created](images/ibmcloud-configure-container-registry-3.png)
 
-## Toolchain setup and execution <a name="part-SECTION-01"></a>
+## **Toolchain setup and execution** <a name="part-SECTION-01"></a>
 
+--- 
 
-### 1 Build a IBM Cloud toolchain <a name="part-SETUP-04"></a>	
+### **1. Build a IBM Cloud toolchain** <a name="part-SETUP-04"></a>	
+
+---
 
 #### Step 1: Press "Create toolchain"
 
 [![Create toolchain](https://cloud.ibm.com/devops/graphics/create_toolchain_button.png)](https://cloud.ibm.com/devops/setup/deploy?repository=https%3A%2F%2Fgithub.com%2Fthomassuedbroecker%2Fcloud-native-starter-one-service-workshop-toolchain)
+
+---
 
 #### Step 2: Select the Dallas as region
 
@@ -122,7 +153,7 @@ _Note:_ Namespaces are required to be **unique** across the entire **region** th
 
 ![Warning](images/ibmcloud-continuous-delivery-warning.png)
 
-
+---
 
 #### Step 3: Configure the location for the cloned GitHub project
 
@@ -161,11 +192,15 @@ _Note:_ If you change the Kubernetes namespace name, you need to be aware of the
 * [Documentation on IBM Cloud](https://cloud.ibm.com/docs/containers?topic=containers-images)
 * [Documentation on Kubernetes](https://kubernetes.io/docs/concepts/containers/images/)
 
+---
+
 #### Step 6: Press "Create"
 
 ![Press Create](images/toolchain-07.png)
 
-### 2 Work with the created toolchain <a name="part-SETUP-05"></a>
+--- 
+
+### 2. Work with the created toolchain <a name="part-SETUP-05"></a>
 
 In the toolchain you see:
 
@@ -173,19 +208,27 @@ In the toolchain you see:
 * **Code**  [Eclipse Orion Web IDE](https://cloud.ibm.com/docs/services/ContinuousDelivery?topic=ContinuousDelivery-web_ide) and source code managed in GitLab
 * **Delivery** Managed in the in the [Continues Delivery service](https://cloud.ibm.com/catalog/services/continuous-delivery#about)
 
+---
+
 #### Step 1: Visit the create GitLab project inside IBM Cloud
 
 Open the GitLab repository in a new browser tab.
 
 ![Open the GitLab repository in a new browser tab](images/toolchain-08.png)
 
+---
+
 #### Step 2: Take a look in the cloned Cloud Native Starter project
 
 ![Take a look in the cloned Cloud Native Starter project](images/toolchain-09.png)
 
+---
+
 #### Step 3: Go back to the toolchain and visit the delivey pipeline
 
 ![Open the delivery pipeline](images/toolchain-10.png)
+
+---
 
 #### Step 4: In the delivery pipeline you see two stages
 
@@ -196,13 +239,19 @@ Wait until the stages and their jobs are executed.
 
 ![Open the delivery pipeline](images/toolchain-11.png)
 
+---
+
 ## Verify the deployed authors microservice <am name="part-SECTION-03"></a>
+
+---
 
 #### Step 1: Open the deployment job in a new browser tab
 
 Open the **deploy java authors microservice to the Kubernetes cluster** job, in the **DEPLOY SERVICES** stage of the pipeline.
 
 ![Open the deploy job in a new browser tab](images/toolchain-12.png)
+
+---
 
 #### Step 2: Verify the deployment job logs and open the OpenAPI explorer of the authors microservice to test the microservice
 
@@ -229,7 +278,11 @@ You see following steps in the following gif.
 
 :star: **Congratulations** :thumbsup: you have finished the workshop.
 
+---
+
 ## Additional information <a name="part-SECTION-04"></a>
+
+---
 
 ### Information resources about developing a open toolchain
 
