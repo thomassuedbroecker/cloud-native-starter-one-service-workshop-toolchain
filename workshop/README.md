@@ -1,6 +1,14 @@
 ## Workshop: Use a IBM Cloud toolchain to deploy a Java Microservices to Kubernetes on IBM Cloud
 
-This project does automate the deployment in [Lab 4 - Deploy to Kubernetes](https://github.com/IBM/cloud-native-starter/blob/master/workshop-one-service/4-kubernetes.md) of the authors microservice of the Cloud Native Starter workshop [Build a Java Microservice and deploy the Microservice to Kubernetes on IBM Cloud](https://github.com/IBM/cloud-native-starter/tree/master/workshop-one-service) to a free Kubernetes cluster on IBM Cloud.
+This project does automate the deployment in the [Lab 4 - Deploy to Kubernetes](https://github.com/IBM/cloud-native-starter/blob/master/workshop-one-service/4-kubernetes.md).
+
+The Authors Microservice of the Cloud-Native-Starter hands-on workshop [Build a Java Microservice and deploy the Microservice to Kubernetes on IBM Cloud](https://github.com/IBM/cloud-native-starter/tree/master/workshop-one-service) will be automated deployed to a free Kubernetes cluster on IBM Cloud.
+
+### Estimated time and level
+
+|  Time | Level  |
+| - | - |
+| one hour | beginners |
 
 ### Objectives
 
@@ -12,7 +20,7 @@ After you complete this workshop, you'll understand the toolchain automation to 
 
 In the following image you get an overview deployment of the authors microserviceto to a free IBM Cloud Kubernetes Cluster.
 
-![overview of the authors microservice deployment](images/lab-4-overview.png)
+![overview of the authors microservice deployment](../images/lab-4-overview.png)
 
 ### About this workshop
 
@@ -44,8 +52,6 @@ This workshop has been tested on the following platforms:
 
 * **IBM Cloud Kubernetes cluster service**: Kubernetes version 1.17.5_1522 (Plan:free) 
 * **IBM Cloud Continuous Delivery**: (Plan: Lite)
-
-### Technology Used
 
 ### Technology Used
 
