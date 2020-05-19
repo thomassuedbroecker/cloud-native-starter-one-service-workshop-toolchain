@@ -1,36 +1,38 @@
-# Lab 6: Verify the deployed authors Microservice
+# Lab 6 - Work with the created toolchain <a name="part-SETUP-05"></a>
+
+In the toolchain you see:
+
+* **Think** Issues managed in GitLab
+* **Code**  [Eclipse Orion Web IDE](https://cloud.ibm.com/docs/services/ContinuousDelivery?topic=ContinuousDelivery-web_ide) and source code managed in GitLab
+* **Delivery** Managed in the in the [Continues Delivery service](https://cloud.ibm.com/catalog/services/continuous-delivery#about)
 
 ---
 
-### Step 1: Open the deployment job in a new browser tab
+### Step 1: Visit the create GitLab project inside IBM Cloud
 
-Open the **deploy java authors microservice to the Kubernetes cluster** job, in the **DEPLOY SERVICES** stage of the pipeline.
+Open the GitLab repository in a new browser tab.
 
-![Open the deploy job in a new browser tab](../../images/toolchain-12.png)
+![Open the GitLab repository in a new browser tab](../../images/toolchain-08.png)
 
 ---
 
-### Step 2: Verify the deployment job logs and open the OpenAPI explorer of the authors microservice to test the microservice
+### Step 2: Take a look in the cloned Cloud Native Starter project
 
-You see following steps in the following gif.
+![Take a look in the cloned Cloud Native Starter project](../../images/toolchain-09.png)
 
-1. Find the URL of the authors OpenAPI explorer in the logs 
-2. Copy the OpenAPI explorer URL in to a browser or just open the URL in a new tab of the current browser
+---
 
-   ![OpenAPI explorer URL](../../images/toolchain-13.png)
+### Step 3: Go back to the toolchain and visit the delivey pipeline
 
-3. Press "Try it out"
-4. Press "Execute"
-5. Verify the "Reponse body"
+![Open the delivery pipeline](../../images/toolchain-10.png)
 
-   ```javascript
-   {
-    "name": "Niklas Heidloff",
-    "twitter": "https://twitter.com/nheidloff",
-    "blog": "http://heidloff.net"
-    }
-   ```
+---
 
-![Verify the deployment result and open the OpenAPI explorer of the authors microservice and test the microservice](../../images/toolchain-02.gif)
+### Step 4: In the delivery pipeline you see two stages
 
-:star: **Congratulations** :thumbsup: you have finished the workshop.
+Wait until the stages and their jobs are executed.
+
+* FETCH _Does copy the source code in the Fetch code job, to the pipeline to provide the source code as an input for the DEPLOY SERVICES Stage_
+* DEPLOY SERVICES _Does a build and deploy job to deploy the authors microservice to the Kubernetes cluster on IBM Cloud._
+
+![Open the delivery pipeline](../../images/toolchain-11.png)
