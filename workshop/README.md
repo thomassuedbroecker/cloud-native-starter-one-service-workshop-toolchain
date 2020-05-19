@@ -20,7 +20,7 @@ After you complete this workshop, you'll understand the toolchain automation to 
 
 In the following image you get an overview deployment of the authors microserviceto to a free IBM Cloud Kubernetes Cluster.
 
-![overview of the authors microservice deployment](../images/lab-4-overview.png)
+![Overview of the Authors Microservice deployment](../images/lab-4-overview.png)
 
 ### About this workshop
 
@@ -42,7 +42,7 @@ These are the labs of this workshop, go through all of them in sequence, start w
 | [Lab 3](lab3/README.md) | Create a free Kubernetes cluster |
 | [Lab 4](lab4/README.md) | Configure the IBM Cloud Container Registry |
 | [Lab 5](lab5/README.md) | Deploy the Microservice with the  IBM Cloud toolchain |
-| [Lab 6](lab6/README.md) | Work with the created toolchain |
+| [Lab 6](lab6/README.md) | Use the created toolchain |
 | [Lab 7](lab7/README.md) | Verify the deployed authors microservice |
 
 
@@ -50,8 +50,8 @@ These are the labs of this workshop, go through all of them in sequence, start w
 
 This workshop has been tested on the following platforms:
 
-* **IBM Cloud Kubernetes cluster service**: Kubernetes version 1.17.5_1522 (Plan:free) 
-* **IBM Cloud Continuous Delivery**: (Plan: Lite)
+* [**IBM Cloud Kubernetes service**](https://www.ibm.com/cloud/container-service/): Kubernetes version 1.17.5_1522 (Plan:free) 
+* [**IBM Cloud Continuous Delivery**](https://www.ibm.com/cloud/continuous-delivery): (Plan: Lite)
 
 ### Technology Used
 
