@@ -23,6 +23,7 @@
 * [Cloud-Native-Starter project](https://github.com/IBM/cloud-native-starter/tree/master/reactive)
 * [Creating Custom Toolchain Templates](https://github.com/open-toolchain/sdk/wiki/Creating-Custom-Toolchain-Templates)
 * [Configuring tool integrations](https://cloud.ibm.com/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations)
+* [Hands-on workshop "Build a Java Microservice and deploy the Microservice to Kubernetes on IBM Cloud"](https://github.com/IBM/cloud-native-starter/tree/master/workshop-one-service)
 
 
 
