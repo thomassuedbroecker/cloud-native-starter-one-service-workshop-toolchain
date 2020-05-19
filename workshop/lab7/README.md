@@ -33,4 +33,4 @@ You see following steps in the following gif.
 
 ![Verify the deployment result and open the OpenAPI explorer of the authors microservice and test the microservice](../../images/toolchain-02.gif)
 
-:star: **Congratulations** :thumbsup: you have finished the workshop.
+**Congratulations** you have finished the workshop.
