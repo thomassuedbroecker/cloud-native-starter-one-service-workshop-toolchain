@@ -13,8 +13,9 @@
 
 ### Deploy the Authors microservice to IBM Cloud
 
-* [Lab 5 - Develop reactive Endpoints](lab5/README.md) 
-* [Lab 6 - Invoke Endpoints reactively](lab6/README.md)
+* [Lab 5 - Deploy the Microservice to Kubernetes](lab5/README.md) 
+* [Lab 6 - Verify the deployed Microservice](lab6/README.md)
+
 
 ### Resources
 

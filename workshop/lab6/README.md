@@ -1,4 +1,4 @@
-# Lab 6: Verify the deployed authors microservice
+# Lab 6: Verify the deployed authors Microservice
 
 ---
 
