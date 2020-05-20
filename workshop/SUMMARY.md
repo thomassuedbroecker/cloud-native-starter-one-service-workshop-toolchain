@@ -14,7 +14,7 @@
 ### Deploy the Authors microservice to IBM Cloud
 
 * [Lab 5 - Deploy the Microservice to Kubernetes](lab5/README.md) 
-* [Lab 6 - Use with the created toolchain](lab6/README.md)
+* [Lab 6 - Use the created toolchain](lab6/README.md)
 * [Lab 7 - Verify the deployed Microservice](lab7/README.md)
 
 
