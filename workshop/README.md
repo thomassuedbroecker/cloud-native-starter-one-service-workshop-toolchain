@@ -2,8 +2,8 @@
 
 This hands-on workshop is related to the Cloud-Native-Starter hands-on workshop [Build a Java Microservice and deploy the Microservice to Kubernetes on IBM Cloud](https://github.com/IBM/cloud-native-starter/tree/master/workshop-one-service)
 
-In this workshop you automate the deployment the steps of [Lab 4 - Deploy to Kubernetes](https://github.com/IBM/cloud-native-starter/blob/master/workshop-one-service/4-kubernetes.md) in the hands-on workshop.
-The Authors Microservice of the will be automated deployed to a free Kubernetes cluster on IBM Cloud.
+In this workshop you automate the deployment steps of [Lab 4 - Deploy to Kubernetes](https://github.com/IBM/cloud-native-starter/blob/master/workshop-one-service/4-kubernetes.md) in the hands-on workshop.
+The Authors Microservice will be automated deployed to a free Kubernetes cluster on IBM Cloud.
 
 ### Estimated time and level
 
